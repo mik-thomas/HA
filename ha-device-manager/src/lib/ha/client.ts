@@ -122,6 +122,11 @@ export async function fetchStates(): Promise<HaState[]> {
     cache: "no-store",
   });
   if (!res.ok) {
+    if (res.status === 401) {
+      throw new Error(
+        "Home Assistant rejected the access token (401). Create a new long-lived token: Profile → Security → Long-Lived Access Tokens, or run: npm run ha:token",
+      );
+    }
     throw new Error(`Home Assistant states failed: ${res.status}`);
   }
   return res.json() as Promise<HaState[]>;

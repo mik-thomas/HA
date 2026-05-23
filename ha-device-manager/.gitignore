@@ -23,6 +23,9 @@
 # per-install barcode assignments (optional: commit to share across deploys)
 /data/device-barcodes.json
 
+# smoke test artifacts
+.smoke-screenshots/
+
 # misc
 .DS_Store
 *.pem

@@ -36,4 +36,9 @@ python3 build_home_dashboard.py
 
 ## Railway
 
-Set the service **root directory** to `ha-device-manager`, or use the repo root with build/start commands that `cd` into that folder (see `ha-device-manager/railway.toml`).
+Deploy the **ha-device-manager** service:
+
+1. Railway → service **Settings** → **Root Directory** = `ha-device-manager`  
+   **or** use root `railway.toml` (builds from monorepo root).
+2. Set `HA_URL` and `HA_TOKEN` (see `ha-device-manager/README.md`).
+3. `HA_URL` must be reachable from the cloud (not `homeassistant.local`).

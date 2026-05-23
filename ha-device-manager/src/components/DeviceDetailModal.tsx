@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useIsDeviceHighlighted } from "@/components/DeviceHighlightContext";
+import { useDeviceInventory } from "@/components/DeviceInventoryContext";
 import { EntityPowerBadge, PowerBadge } from "@/components/PowerBadge";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -39,8 +40,7 @@ export function DeviceDetailModal({
   device: DeviceWithEntities | null;
   onClose: () => void;
 }) {
-  const [states, setStates] = useState<Map<string, HaState>>(new Map());
-  const [loadingStates, setLoadingStates] = useState(false);
+  const { stateMap } = useDeviceInventory();
   const [barcode, setBarcode] = useState<string | null>(null);
   const [barcodeBusy, setBarcodeBusy] = useState(false);
   const highlighted = useIsDeviceHighlighted(device?.device.id ?? "");
@@ -61,19 +61,6 @@ export function DeviceDetailModal({
 
   useEffect(() => {
     if (!device) return;
-    setLoadingStates(true);
-    void fetch("/api/states")
-      .then((res) => res.json())
-      .then((json: { states?: HaState[] }) => {
-        const map = new Map((json.states ?? []).map((s) => [s.entity_id, s]));
-        setStates(map);
-      })
-      .catch(() => setStates(new Map()))
-      .finally(() => setLoadingStates(false));
-  }, [device]);
-
-  useEffect(() => {
-    if (!device) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
@@ -89,7 +76,7 @@ export function DeviceDetailModal({
     if (!device) return [];
     return device.entities.map((ent) => {
       const info = device.entityStates.find((s) => s.entity_id === ent.entity_id);
-      const live = states.get(ent.entity_id);
+      const live = stateMap.get(ent.entity_id);
       const attrs = (live?.attributes ?? {}) as Record<string, unknown>;
       return {
         ent,
@@ -100,7 +87,7 @@ export function DeviceDetailModal({
         domain: ent.entity_id.split(".")[0],
       };
     });
-  }, [device, states]);
+  }, [device, stateMap]);
 
   if (!device) return null;
 
@@ -160,9 +147,6 @@ export function DeviceDetailModal({
         </header>
 
         <div className="min-h-0 flex-1 overflow-y-auto p-5">
-          {loadingStates && (
-            <p className="mb-3 text-xs text-muted">Refreshing live states…</p>
-          )}
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-left text-sm">
               <thead className="bg-white/[0.03] text-xs uppercase tracking-wide text-muted">

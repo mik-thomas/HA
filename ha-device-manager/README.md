@@ -19,6 +19,7 @@ Codes are stored in `data/device-barcodes.json` on the server (use a persistent 
 - Rename devices (`name_by_user`) and assign areas
 - Per-device entity list: rename entities, enable/disable
 - Areas CRUD (create, rename, delete)
+- **Automations** — list all automations with enabled/disabled/running status (live updates)
 
 Uses Home Assistant WebSocket registry APIs and a long-lived access token.
 
@@ -33,6 +34,13 @@ npm run dev
 ```
 
 Open [http://localhost:3001](http://localhost:3001).
+
+### Smoke tests (run after changes)
+
+```bash
+npm run smoke          # API + HTML + live SSE
+npm run smoke:browser  # Playwright UI checks + screenshots in .smoke-screenshots/
+```
 
 ### "Internal Server Error" in the browser
 
@@ -55,12 +63,25 @@ Do **not** commit `.env.local` or passwords to Git.
 
 ## Deploy on Railway (GitHub)
 
-1. Push this folder to a **new GitHub repository** (root = `ha-device-manager` contents).
-2. [Railway](https://railway.app/) → **New Project** → **Deploy from GitHub repo**.
-3. Set **Variables**:
-   - `HA_URL` — must be reachable from Railway (see below)
-   - `HA_TOKEN` — long-lived token
-4. Railway auto-detects Next.js; build runs `npm run build`, start `npm run start`.
+Repo layout: app is in **`ha-device-manager/`** (monorepo). Use **one** of these:
+
+### Option A — Root directory (recommended)
+
+1. [Railway](https://railway.app/) → your service → **Settings** → **Root Directory** → `ha-device-manager`
+2. Redeploy. Build: `npm run build`, start: `npm start` (uses Railway `PORT` automatically).
+
+### Option B — Deploy from repo root
+
+Root `railway.toml` runs build/start inside `ha-device-manager/` — leave Root Directory empty.
+
+### Variables (required)
+
+| Variable | Example |
+|----------|---------|
+| `HA_URL` | `https://YOUR_INSTANCE.ui.nabu.casa` |
+| `HA_TOKEN` | Long-lived token from HA Profile |
+
+Health check uses `/api/ping` (app only). `/api/health` also tests HA once variables are set.
 
 ### Important: URL for Railway
 

@@ -57,6 +57,20 @@ export interface DeviceWithEntities {
   offCount: number;
 }
 
+export interface HaAutomation {
+  entity_id: string;
+  config_id: string | null;
+  friendly_name: string;
+  /** Automation is enabled (HA state on) and can trigger */
+  enabled: boolean;
+  /** Automation is currently executing actions */
+  running: boolean;
+  running_count: number;
+  mode: string | null;
+  last_triggered: string | null;
+  state: string;
+}
+
 export interface HaWsResult<T> {
   id: number;
   type: string;

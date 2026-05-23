@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { IconChevronRight, IconRefresh, IconSearch } from "@/components/icons";
 import { useIsDeviceHighlighted } from "@/components/DeviceHighlightContext";
+import { useDeviceInventory } from "@/components/DeviceInventoryContext";
 import { useDeviceModal } from "@/components/DeviceModalContext";
 import { Alert } from "@/components/ui/Alert";
 import { Badge } from "@/components/ui/Badge";
@@ -12,66 +13,20 @@ import { PageHeader, StatPill } from "@/components/ui/PageHeader";
 import { TableSkeleton } from "@/components/ui/Spinner";
 import { PowerBadge } from "@/components/PowerBadge";
 import { deviceGradient, deviceInitials } from "@/lib/deviceAvatar";
-import type { DevicePowerStatus, DeviceWithEntities, HaArea } from "@/lib/ha/types";
-
-interface InventoryResponse {
-  devices: DeviceWithEntities[];
-  areas: HaArea[];
-  areaMap: Record<string, string>;
-  error?: string;
-}
+import type { DevicePowerStatus, DeviceWithEntities } from "@/lib/ha/types";
 
 export function DeviceList() {
   const { openDevice } = useDeviceModal();
-  const [data, setData] = useState<InventoryResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { devices, areas, areaMap, loading, error, refreshing, refresh } =
+    useDeviceInventory();
   const [query, setQuery] = useState("");
   const [areaFilter, setAreaFilter] = useState("");
   const [powerFilter, setPowerFilter] = useState<"" | DevicePowerStatus>("");
 
-  const load = useCallback(async (silent = false) => {
-    if (!silent) setLoading(true);
-    else setRefreshing(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/devices");
-      const text = await res.text();
-      let json: InventoryResponse;
-      try {
-        json = JSON.parse(text) as InventoryResponse;
-      } catch {
-        throw new Error(
-          res.ok ? "Invalid response from server" : text.slice(0, 120) || res.statusText,
-        );
-      }
-      if (!res.ok) {
-        const msg = json.error ?? res.statusText;
-        if (msg === "Internal Server Error" || text.includes("Internal Server Error")) {
-          throw new Error(
-            "App server error — run: cd ha-device-manager && npm run serve",
-          );
-        }
-        throw new Error(msg);
-      }
-      setData(json);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load devices");
-    } finally {
-      setLoading(false);
-      setRefreshing(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    void load();
-  }, [load]);
-
   const filtered = useMemo(() => {
-    if (!data) return [];
+    if (!devices.length && loading) return [];
     const q = query.trim().toLowerCase();
-    return data.devices.filter((row) => {
+    return devices.filter((row) => {
       if (areaFilter && row.device.area_id !== areaFilter) return false;
       if (powerFilter && row.powerStatus !== powerFilter) return false;
       if (!q) return true;
@@ -86,11 +41,11 @@ export function DeviceList() {
         .toLowerCase();
       return hay.includes(q);
     });
-  }, [data, query, areaFilter, powerFilter]);
+  }, [devices, query, areaFilter, powerFilter, loading]);
 
   const onDevices = useMemo(
-    () => (data?.devices ?? []).filter((d) => d.powerStatus === "on").length,
-    [data],
+    () => devices.filter((d) => d.powerStatus === "on").length,
+    [devices],
   );
 
   const unassigned = useMemo(
@@ -115,7 +70,7 @@ export function DeviceList() {
     return (
       <>
         <PageHeader eyebrow="Inventory" title="Devices" />
-        <Alert variant="error" title="Could not reach Home Assistant" onRetry={() => void load()}>
+        <Alert variant="error" title="Could not reach Home Assistant" onRetry={() => void refresh()}>
           {error}
         </Alert>
       </>
@@ -130,7 +85,7 @@ export function DeviceList() {
         description="Browse, rename, and organize every device connected to your Home Assistant instance."
         stats={
           <div className="flex gap-2">
-            <StatPill label="Total" value={data?.devices?.length ?? 0} />
+            <StatPill label="Total" value={devices.length} />
             <StatPill label="On now" value={onDevices} />
             <StatPill label="Showing" value={filtered.length} />
           </div>
@@ -153,7 +108,7 @@ export function DeviceList() {
             onChange={(e) => setAreaFilter(e.target.value)}
           >
             <option value="">All areas</option>
-            {(data?.areas ?? []).map((area) => (
+            {areas.map((area) => (
               <option key={area.area_id} value={area.area_id}>
                 {area.name}
               </option>
@@ -175,7 +130,7 @@ export function DeviceList() {
         </div>
         <Button
           variant="secondary"
-          onClick={() => void load(true)}
+          onClick={() => void refresh(true)}
           disabled={refreshing}
           className="shrink-0"
         >
@@ -188,7 +143,7 @@ export function DeviceList() {
         <div className="mb-4 flex flex-wrap gap-2 animate-in">
           {areaFilter && (
             <Badge tone="accent">
-              {data?.areaMap[areaFilter] ?? "Filtered area"}
+              {areaMap[areaFilter] ?? "Filtered area"}
             </Badge>
           )}
           {unassigned > 0 && !areaFilter && (

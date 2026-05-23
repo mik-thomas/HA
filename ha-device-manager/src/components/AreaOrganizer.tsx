@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { IconLayers, IconRefresh, IconSearch } from "@/components/icons";
 import { useIsDeviceHighlighted } from "@/components/DeviceHighlightContext";
+import { useDeviceInventory } from "@/components/DeviceInventoryContext";
 import { useDeviceModal } from "@/components/DeviceModalContext";
 import { PowerBadge } from "@/components/PowerBadge";
 import { Alert } from "@/components/ui/Alert";
@@ -10,17 +11,10 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { LoadingPanel } from "@/components/ui/Spinner";
 import { deviceGradient, deviceInitials } from "@/lib/deviceAvatar";
-import type { DeviceWithEntities, HaArea } from "@/lib/ha/types";
+import type { DeviceWithEntities } from "@/lib/ha/types";
 
 const DRAG_TYPE = "application/x-ha-device-id";
 const UNASSIGNED_ID = "__unassigned__";
-
-interface InventoryResponse {
-  devices: DeviceWithEntities[];
-  areas: HaArea[];
-  areaMap: Record<string, string>;
-  error?: string;
-}
 
 function DeviceChip({
   device,
@@ -175,45 +169,30 @@ function DropColumn({
 
 export function AreaOrganizer() {
   const { openDevice } = useDeviceModal();
-  const [data, setData] = useState<InventoryResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const {
+    devices: liveDevices,
+    areas,
+    loading,
+    error: inventoryError,
+    refresh,
+  } = useDeviceInventory();
+  const [deviceOverride, setDeviceOverride] = useState<DeviceWithEntities[] | null>(null);
+  const [moveError, setMoveError] = useState<string | null>(null);
   const [sidebarQuery, setSidebarQuery] = useState("");
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dropTarget, setDropTarget] = useState<string | null>(null);
   const [savingId, setSavingId] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/devices");
-      const text = await res.text();
-      let json: InventoryResponse;
-      try {
-        json = JSON.parse(text) as InventoryResponse;
-      } catch {
-        throw new Error(
-          res.ok ? "Invalid response" : text.slice(0, 120) || res.statusText,
-        );
-      }
-      if (!res.ok) throw new Error(json.error ?? res.statusText);
-      setData({
-        ...json,
-        areas: Array.isArray(json.areas) ? json.areas : [],
-        devices: Array.isArray(json.devices) ? json.devices : [],
-      });
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const data = useMemo(
+    () => ({
+      devices: deviceOverride ?? liveDevices,
+      areas,
+    }),
+    [deviceOverride, liveDevices, areas],
+  );
 
-  useEffect(() => {
-    void load();
-  }, [load]);
+  const error = moveError ?? inventoryError;
 
   useEffect(() => {
     if (!toast) return;
@@ -255,22 +234,21 @@ export function AreaOrganizer() {
 
   const moveDevice = useCallback(
     async (deviceId: string, targetAreaId: string) => {
-      const device = data?.devices.find((d) => d.device.id === deviceId);
-      if (!device || !data) return;
+      const device = data.devices.find((d) => d.device.id === deviceId);
+      if (!device) return;
 
       const newAreaId = targetAreaId === UNASSIGNED_ID ? null : targetAreaId;
       if (device.device.area_id === newAreaId) return;
 
-      const prev = data;
       const areaName =
         newAreaId === null
           ? null
-          : data.areas.find((a) => a.area_id === newAreaId)?.name ?? null;
+          : areas.find((a) => a.area_id === newAreaId)?.name ?? null;
 
       setSavingId(deviceId);
-      setData({
-        ...data,
-        devices: data.devices.map((d) =>
+      setMoveError(null);
+      setDeviceOverride(
+        data.devices.map((d) =>
           d.device.id === deviceId
             ? {
                 ...d,
@@ -279,7 +257,7 @@ export function AreaOrganizer() {
               }
             : d,
         ),
-      });
+      );
 
       try {
         const res = await fetch(`/api/devices/${deviceId}`, {
@@ -291,14 +269,16 @@ export function AreaOrganizer() {
         if (!res.ok) throw new Error(json.error ?? res.statusText);
         const label = areaName ?? "Unassigned";
         setToast(`Moved “${device.displayName}” to ${label}`);
+        setDeviceOverride(null);
+        await refresh(true);
       } catch (e) {
-        setData(prev);
-        setError(e instanceof Error ? e.message : "Move failed");
+        setDeviceOverride(null);
+        setMoveError(e instanceof Error ? e.message : "Move failed");
       } finally {
         setSavingId(null);
       }
     },
-    [data],
+    [data.devices, areas, refresh],
   );
 
   const handleDragStart = (deviceId: string) => (e: React.DragEvent) => {
@@ -330,15 +310,13 @@ export function AreaOrganizer() {
     return <LoadingPanel message="Loading areas and devices…" />;
   }
 
-  if (error && !data) {
+  if (error && !data.devices.length && !loading) {
     return (
-      <Alert variant="error" title="Could not load organizer" onRetry={() => void load()}>
+      <Alert variant="error" title="Could not load organizer" onRetry={() => void refresh()}>
         {error}
       </Alert>
     );
   }
-
-  if (!data) return null;
 
   const sortedAreas = [...(data.areas ?? [])].sort((a, b) =>
     (a.name ?? "").localeCompare(b.name ?? ""),
@@ -365,7 +343,7 @@ export function AreaOrganizer() {
             immediately.
           </p>
         </div>
-        <Button variant="secondary" onClick={() => void load()}>
+        <Button variant="secondary" onClick={() => void refresh(true)}>
           <IconRefresh className="h-4 w-4" />
           Refresh
         </Button>

@@ -1,0 +1,9 @@
+# Monorepo: Next.js app lives in ha-device-manager/
+[build]
+builder = "nixpacks"
+buildCommand = "cd ha-device-manager && npm ci && npm run build"
+
+[deploy]
+startCommand = "cd ha-device-manager && npm start"
+healthcheckPath = "/api/ping"
+restartPolicyType = "on_failure"

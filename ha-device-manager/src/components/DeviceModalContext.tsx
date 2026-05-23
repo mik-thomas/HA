@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { DeviceDetailModal } from "@/components/DeviceDetailModal";
+import { useDeviceInventory } from "@/components/DeviceInventoryContext";
 import type { DeviceWithEntities } from "@/lib/ha/types";
 
 type DeviceModalContextValue = {
@@ -19,28 +20,16 @@ type DeviceModalContextValue = {
 const DeviceModalContext = createContext<DeviceModalContextValue | null>(null);
 
 export function DeviceModalProvider({ children }: { children: ReactNode }) {
-  const [device, setDevice] = useState<DeviceWithEntities | null>(null);
+  const [deviceId, setDeviceId] = useState<string | null>(null);
+  const { getDevice } = useDeviceInventory();
+  const device = deviceId ? getDevice(deviceId) ?? null : null;
 
-  const openDevice = useCallback(async (target: DeviceWithEntities | string) => {
-    if (typeof target === "object") {
-      setDevice(target);
-      return;
-    }
-    try {
-      const res = await fetch("/api/devices");
-      const json = (await res.json()) as {
-        devices: DeviceWithEntities[];
-        error?: string;
-      };
-      if (!res.ok) throw new Error(json.error);
-      const found = json.devices.find((d) => d.device.id === target);
-      if (found) setDevice(found);
-    } catch {
-      /* ignore */
-    }
+  const openDevice = useCallback((target: DeviceWithEntities | string) => {
+    const id = typeof target === "string" ? target : target.device.id;
+    setDeviceId(id);
   }, []);
 
-  const closeDevice = useCallback(() => setDevice(null), []);
+  const closeDevice = useCallback(() => setDeviceId(null), []);
 
   const value = useMemo(
     () => ({ openDevice, closeDevice }),

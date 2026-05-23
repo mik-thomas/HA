@@ -2,6 +2,6 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "npm run start"
-healthcheckPath = "/"
+startCommand = "npm start"
+healthcheckPath = "/api/ping"
 restartPolicyType = "on_failure"

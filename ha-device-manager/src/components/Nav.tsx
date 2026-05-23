@@ -2,10 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IconDevices, IconHome, IconLayers, IconMap, IconScan, IconTag } from "@/components/icons";
+import {
+  IconAutomation,
+  IconDevices,
+  IconHome,
+  IconLayers,
+  IconMap,
+  IconScan,
+  IconTag,
+} from "@/components/icons";
 
 const links = [
   { href: "/", label: "Devices", icon: IconDevices },
+  { href: "/automations", label: "Automations", icon: IconAutomation },
   { href: "/organize", label: "Organize", icon: IconLayers },
   { href: "/scan", label: "Scan", icon: IconScan },
   { href: "/labels", label: "Labels", icon: IconTag },
