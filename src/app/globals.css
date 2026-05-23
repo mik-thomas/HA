@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070b12;
+  --background-elevated: #0d121c;
+  --foreground: #f1f5f9;
+  --card: rgba(18, 26, 40, 0.72);
+  --card-solid: #121a28;
+  --border: rgba(148, 163, 184, 0.12);
+  --border-strong: rgba(148, 163, 184, 0.22);
+  --accent: #38bdf8;
+  --accent-dim: rgba(56, 189, 248, 0.14);
+  --accent-glow: rgba(56, 189, 248, 0.35);
+  --muted: #94a3b8;
+  --muted-foreground: #64748b;
+  --success: #34d399;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --radius: 14px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-solid: var(--card-solid);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(99, 102, 241, 0.08), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 100%, rgba(16, 185, 129, 0.06), transparent),
+    var(--background);
+  pointer-events: none;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--foreground);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.45s ease-out both;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.06) 0%,
+    rgba(148, 163, 184, 0.14) 50%,
+    rgba(148, 163, 184, 0.06) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+.glass-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 20px 50px -24px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes blink-green {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.85);
+  }
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 2px rgba(52, 211, 153, 0.2);
+  }
+}
+
+.power-badge-on {
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  background: rgba(16, 185, 129, 0.14);
+  color: #4ade80;
+  animation: blink-green 1.1s ease-in-out infinite;
+}
+
+.power-badge-off {
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  background: rgba(239, 68, 68, 0.14);
+  color: #f87171;
+}
+
+.power-dot-on {
+  background: #22c55e;
+  animation: blink-green 1.1s ease-in-out infinite;
+}
+
+.power-dot-off {
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.65);
+}
+
+@keyframes device-highlight-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(56, 189, 248, 0.9),
+      0 0 24px rgba(56, 189, 248, 0.45);
+    background-color: rgba(56, 189, 248, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(56, 189, 248, 0.35),
+      0 0 40px rgba(56, 189, 248, 0.2);
+    background-color: rgba(56, 189, 248, 0.22);
+  }
+}
+
+.device-highlight-pulse {
+  animation: device-highlight-pulse 0.85s ease-in-out infinite;
+  border-color: rgba(56, 189, 248, 0.65) !important;
+}
+
+@media print {
+  body::before {
+    display: none;
+  }
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
