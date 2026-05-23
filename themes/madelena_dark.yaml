@@ -1,0 +1,11 @@
+madelena_dark:
+  modes:
+    dark: {}
+  dark:
+    primary-background-color: "#0a0e18"
+    primary-text-color: "#e8ecf4"
+    secondary-text-color: "#9aa8c4"
+    card-background-color: "rgba(18, 22, 34, 0.94)"
+    ha-card-background: "rgba(18, 22, 34, 0.94)"
+    ha-card-border-radius: "18px"
+    ha-card-box-shadow: "0 8px 32px rgba(0, 0, 0, 0.35)"

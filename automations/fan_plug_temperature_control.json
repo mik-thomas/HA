@@ -1,0 +1,95 @@
+{
+  "id": "fan_plug_temperature_control",
+  "alias": "Fan plug temp schedule above 24.5",
+  "description": "Fan_Plug on when hue_motion_sensor_1 temp > 24.5, only 10pm-8am and 2pm-5pm daily; off otherwise",
+  "mode": "single",
+  "trigger": [
+    {
+      "trigger": "state",
+      "entity_id": "sensor.hue_motion_sensor_1_temperature"
+    },
+    {
+      "trigger": "homeassistant",
+      "event": "start"
+    },
+    {
+      "trigger": "time",
+      "at": "08:00:00"
+    },
+    {
+      "trigger": "time",
+      "at": "14:00:00"
+    },
+    {
+      "trigger": "time",
+      "at": "17:00:00"
+    },
+    {
+      "trigger": "time",
+      "at": "22:00:00"
+    }
+  ],
+  "action": [
+    {
+      "choose": [
+        {
+          "conditions": [
+            {
+              "condition": "or",
+              "conditions": [
+                {
+                  "condition": "time",
+                  "after": "22:00:00",
+                  "before": "08:00:00"
+                },
+                {
+                  "condition": "time",
+                  "after": "14:00:00",
+                  "before": "17:00:00"
+                }
+              ]
+            }
+          ],
+          "sequence": [
+            {
+              "choose": [
+                {
+                  "conditions": [
+                    {
+                      "condition": "template",
+                      "value_template": "{{ states('sensor.hue_motion_sensor_1_temperature') | float(0) > 24.5 }}"
+                    }
+                  ],
+                  "sequence": [
+                    {
+                      "action": "switch.turn_on",
+                      "target": {
+                        "entity_id": "switch.fan_plug"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "default": [
+                {
+                  "action": "switch.turn_off",
+                  "target": {
+                    "entity_id": "switch.fan_plug"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "default": [
+        {
+          "action": "switch.turn_off",
+          "target": {
+            "entity_id": "switch.fan_plug"
+          }
+        }
+      ]
+    }
+  ]
+}

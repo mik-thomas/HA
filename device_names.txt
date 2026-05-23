@@ -1,0 +1,134 @@
+BT HomeHub6DX
+Backup
+Bedroom
+Bottom Landing Sensor
+Digital Plug 2
+Digital Plug 3
+Digital Plug 4
+Digital_Plug_5
+Digital_Plug_6
+Digital_Plug_7
+Digital_Plug_8
+Downstairs Cloakroom
+E1
+ESPHome Device Builder
+Fan_Plug
+File editor
+Flamingo_Plant_sensor
+Forecast
+Garden_Troff_1
+Get HACS
+Google Translate en com
+Grafana
+Guest Bathroom Sensor
+HACS
+HASS Bridge:21064
+Home Assistant Core
+Home Assistant Host
+Home Assistant Operating System
+Home Assistant Supervisor
+House Daylight Running
+Hue Bridge
+Hue ambiance spot 1
+Hue ambiance spot 2
+Hue ambiance spot 3
+Hue ambiance spot 4
+Hue motion sensor 2
+ICS Calendar (iCalendar)
+InfluxDB
+KItchen
+Kitchen Aqara PIR Sensor
+Kitchen Spots
+Landing Sensor Top
+Mac
+Matter Server
+Michael Thomas’s iPhone
+Mosquitto broker
+Node-RED
+Onsuite Sensor
+Peace Lilly
+Pixel 10 Pro XL
+Plex Media Server
+Rose_Patch
+Rose_Sensor
+Sun
+Water_Plantet
+Z-Wave JS
+Zigbee2MQTT
+Zigbee2MQTT Bridge
+arc
+iPad
+iPhone
+iphone 16pro
+iphone 17 pro MAX
+iphone air
+motionEye
+shellyplus2pm-30c922751160
+shellyplus2pm-30c922751160 Output 0
+shellyplus2pm-30c922751160 Output 1
+shellyplus2pm-30c922751638
+shellyplus2pm-30c922751638 Output 0
+shellyplus2pm-30c922751638 Output 1
+shellyplus2pm-30c922773e00
+shellyplus2pm-30c922773e00 (30:C9:22:77:3E:02)
+shellyplus2pm-30c922773e00 Output 0
+shellyplus2pm-30c922773e00 Output 1
+Cloak Room	Cloak Room
+Cloak Room	Downstairs WC
+Garden	Garden
+Garden	Outside Light
+Guest Room	Guest Room
+Guest Room	Guest Room Light
+Guest Room	Guest Room switch
+Kitchen	Boiler Cabinet
+Kitchen	Dining table over light
+Kitchen	Kitchen
+Kitchen	Kitchen Cabinet
+Kitchen	Kitchen Hueplay
+Kitchen	Kitchen Play 1
+Kitchen	Kitchen Play 2
+Kitchen	Kitchen Strip Controller
+Kitchen	Kitchen Switch
+Kitchen	Kitchen Table Lamp
+Kitchen	Kitchen Underlights
+Kitchen	Pantry underlight
+Kitchen Spots	Kitchen Spots
+Living Room	Behind Couch
+Living Room	Cabinet
+Living Room	Cieiling light
+Living Room	Fire
+Living Room	Hue Bloom window
+Living Room	Living Room
+Living Room	Living Room Switch
+Living Room	Radiator
+Living Room	TV
+Master Bedrrom	Bedroom
+Master Bedrrom	Master Bedrrom
+Master Bedrrom	Master Bedrrom switch
+Outside	Hue outdoor motion sensor 1
+Outside	Outside
+Outside	Porch 1
+Outside	Porch 2
+Outside	Side 1
+Outside	Side 2
+Outside	Side 3
+Outside	Side 4
+Outside	Side 5
+Outside	Side 6
+Outside	Side 7
+Outside	Side 8
+Overtable	Overtable
+Stairway	Meeting
+Stairway	Stairway
+Stairway	Stairway
+Stairway	Stairway Bottom 1
+Stairway	Stairway Top
+Study Lamp	Home Assistant Voice 0aadf3
+Study Lamp	Monitor L
+Study Lamp	Monitor R
+Study Lamp	Monitor top
+Study Lamp	Study Lamp
+Study Lamp	Study Switch
+Study Lamp	study Ceiling Light
+Troff	Hue lightstrip outdoor 2
+Troff	Troff

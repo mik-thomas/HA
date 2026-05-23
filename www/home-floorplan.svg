@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="222.0 449.2 1076.6 652.0" width="1400" height="900">
+
+    <defs>
+      <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c1220"/>
+        <stop offset="55%" stop-color="#121b2e"/>
+        <stop offset="100%" stop-color="#0a0f18"/>
+      </linearGradient>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e2d45" stroke-width="0.6"/>
+      </pattern>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    
+<rect x="222.0" y="449.2" width="1076.6" height="652.0" fill="url(#bg)"/>
+<rect x="222.0" y="449.2" width="1076.6" height="652.0" fill="url(#grid)" opacity="0.35"/>
+<polygon points="700.0,520.0 1202.3,810.0 800.5,1042.0 298.2,752.0" fill="#243049" stroke="#3d5278" stroke-width="1.4" opacity="0.95" stroke-linejoin="round"/>
+<polygon points="614.6,586.7 825.6,708.5 664.8,801.3 453.9,679.5" fill="#4a6fa5" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="453.9,679.5 664.8,801.3 664.8,778.2 453.9,656.4" fill="#2f4568" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="825.6,708.5 664.8,801.3 664.8,778.2 825.6,685.4" fill="#203659" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="880.8,694.0 1056.6,795.5 865.8,905.7 690.0,804.2" fill="#5b8a72" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="690.0,804.2 865.8,905.7 865.8,882.6 690.0,781.1" fill="#355947" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="1056.6,795.5 865.8,905.7 865.8,882.6 1056.6,772.4" fill="#264a38" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="941.1,670.8 1081.7,752.0 1031.5,781.0 890.9,699.8" fill="#6aa388" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="890.9,699.8 1031.5,781.0 1031.5,766.3 890.9,685.1" fill="#3f6652" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="1081.7,752.0 1031.5,781.0 1031.5,766.3 1081.7,737.3" fill="#305743" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="438.8,682.4 529.2,734.6 453.9,778.1 363.5,725.9" fill="#6d7f9d" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="363.5,725.9 453.9,778.1 453.9,759.2 363.5,707.0" fill="#425066" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="529.2,734.6 453.9,778.1 453.9,759.2 529.2,715.7" fill="#334157" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="554.3,737.5 674.9,807.1 584.5,859.3 463.9,789.7" fill="#7a6b9b" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="463.9,789.7 584.5,859.3 584.5,840.4 463.9,770.8" fill="#4a405f" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="674.9,807.1 584.5,859.3 584.5,840.4 674.9,788.2" fill="#3b3150" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="695.0,807.1 775.3,853.5 684.9,905.7 604.6,859.3" fill="#8a7d6b" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="604.6,859.3 684.9,905.7 684.9,882.6 604.6,836.2" fill="#524a40" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="775.3,853.5 684.9,905.7 684.9,882.6 775.3,830.4" fill="#433b31" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="800.5,856.4 911.0,920.2 810.5,978.2 700.0,914.4" fill="#9b8468" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="700.0,914.4 810.5,978.2 810.5,959.3 700.0,895.5" fill="#5c4f3d" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="911.0,920.2 810.5,978.2 810.5,959.3 911.0,901.3" fill="#4d402e" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="795.4,592.5 895.9,650.5 825.6,691.1 725.1,633.1" fill="#5f7fa0" stroke="#1a2744" stroke-width="1.4" opacity="0.88" stroke-linejoin="round"/>
+<polygon points="725.1,633.1 825.6,691.1 825.6,676.4 725.1,618.4" fill="#3a4f66" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="895.9,650.5 825.6,691.1 825.6,676.4 895.9,635.8" fill="#2b4057" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="634.7,563.6 835.6,679.6 684.9,766.6 484.0,650.6" fill="#b08c6a" stroke="#1a2744" stroke-width="1.4" opacity="0.9" stroke-linejoin="round"/>
+<polygon points="484.0,650.6 684.9,766.6 684.9,745.6 484.0,629.6" fill="#6a5340" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="835.6,679.6 684.9,766.6 684.9,745.6 835.6,658.6" fill="#5e4734" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="690.0,769.5 790.4,827.5 710.0,873.9 609.6,815.9" fill="#7d8ea8" stroke="#1a2744" stroke-width="1.4" opacity="0.9" stroke-linejoin="round"/>
+<polygon points="609.6,815.9 710.0,873.9 710.0,859.2 609.6,801.2" fill="#4a5568" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="790.4,827.5 710.0,873.9 710.0,859.2 790.4,812.8" fill="#3e495c" stroke="#101828" stroke-width="1.4" opacity="0.92" stroke-linejoin="round"/>
+<polygon points="760.3,485.2 1262.6,775.2 1202.3,810.0 700.0,520.0" fill="#2d5a3d" stroke="#1f3d2a" stroke-width="1.4" opacity="0.75" stroke-linejoin="round"/>
+<polygon points="659.8,496.8 258.0,728.8 298.2,752.0 700.0,520.0" fill="#3a4f66" stroke="#243041" stroke-width="1.4" opacity="0.6" stroke-linejoin="round"/>
+<polygon points="1202.3,810.0 1242.5,833.2 840.6,1065.2 800.5,1042.0" fill="#3a4f66" stroke="#243041" stroke-width="1.4" opacity="0.6" stroke-linejoin="round"/>
+<polygon points="298.2,752.0 800.5,1042.0 760.3,1065.2 258.0,775.2" fill="#3d5568" stroke="#243041" stroke-width="1.4" opacity="0.55" stroke-linejoin="round"/>
+<g id="area.living_room.bg" class="bg-off"><rect x="444" y="577" width="392" height="235" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.living_room.label" class="room-label" x="640" y="694" text-anchor="middle">Living Room</text>
+<g id="area.kitchen.bg" class="bg-off"><rect x="680" y="684" width="387" height="232" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.kitchen.label" class="room-label" x="873" y="800" text-anchor="middle">Kitchen</text>
+<g id="area.kitchen_spots.bg" class="bg-off"><rect x="881" y="661" width="211" height="130" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.kitchen_spots.label" class="room-label" x="986" y="726" text-anchor="middle">Kitchen Spots</text>
+<g id="area.cloak_room.bg" class="bg-off"><rect x="353" y="672" width="186" height="116" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.cloak_room.label" class="room-label" x="446" y="730" text-anchor="middle">Cloak Room</text>
+<g id="area.guest_room.bg" class="bg-off"><rect x="454" y="728" width="231" height="142" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.guest_room.label" class="room-label" x="569" y="798" text-anchor="middle">Guest Room</text>
+<g id="area.stairway.bg" class="bg-off"><rect x="595" y="797" width="191" height="119" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.stairway.label" class="room-label" x="690" y="856" text-anchor="middle">Stairway</text>
+<g id="area.study_lamp.bg" class="bg-off"><rect x="690" y="846" width="231" height="142" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.study_lamp.label" class="room-label" x="805" y="917" text-anchor="middle">Study Lamp</text>
+<g id="area.overtable.bg" class="bg-off"><rect x="715" y="582" width="191" height="119" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.overtable.label" class="room-label" x="811" y="642" text-anchor="middle">Overtable</text>
+<g id="area.master_bedrrom.bg" class="bg-off"><rect x="474" y="554" width="372" height="223" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.master_bedrrom.label" class="room-label" x="660" y="665" text-anchor="middle">Master Bedrrom</text>
+<g id="area.garden.bg" class="bg-off"><rect x="680" y="475" width="593" height="351" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.garden.label" class="room-label" x="976" y="650" text-anchor="middle">Garden</text>
+<g id="area.outside.bg" class="bg-off"><rect x="258" y="493" width="452" height="269" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.outside.label" class="room-label" x="484" y="627" text-anchor="middle">Outside</text>
+<g id="area.troff.bg" class="bg-off"><rect x="248" y="742" width="562" height="333" rx="8" fill="var(--primary-color)" opacity="0.15"/></g><text id="area.troff.label" class="room-label" x="529" y="909" text-anchor="middle">Troff</text>
+</svg>

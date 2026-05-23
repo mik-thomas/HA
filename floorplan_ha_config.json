@@ -1,0 +1,167 @@
+{
+  "image": {
+    "location": "/local/home-floorplan.svg",
+    "cache": false
+  },
+  "stylesheet": "/local/ha-floorplan.css",
+  "defaults": {
+    "hover_action": "hover-info",
+    "tap_action": "more-info"
+  },
+  "rules": [
+    {
+      "entity": "light.living_room",
+      "element": "area.living_room.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.kitchen",
+      "element": "area.kitchen.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.master_bedrrom",
+      "element": "area.master_bedrrom.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.guest_room",
+      "element": "area.guest_room.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.garden",
+      "element": "area.garden.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.outside",
+      "element": "area.outside.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.cloak_room",
+      "element": "area.cloak_room.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.stairway",
+      "element": "area.stairway.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.study_lamp",
+      "element": "area.study_lamp.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.troff",
+      "element": "area.troff.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    },
+    {
+      "entity": "light.kitchen_spots",
+      "element": "area.kitchen_spots.bg",
+      "state_action": {
+        "action": "call-service",
+        "service": "floorplan.class_set",
+        "service_data": {
+          "class": "${(entity.state === \"on\") ? \"bg-on\" : \"bg-off\"}"
+        }
+      },
+      "tap_action": {
+        "action": "toggle"
+      }
+    }
+  ]
+}

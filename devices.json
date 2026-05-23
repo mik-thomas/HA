@@ -1,0 +1,2363 @@
+[
+  {
+    "name": "BT HomeHub6DX",
+    "area": "",
+    "manufacturer": "BT",
+    "model": "BT Hub 6DX",
+    "integration": "upnp",
+    "entities": [
+      "binary_sensor.bt_homehub6dx_wan_status (WAN status)",
+      "sensor.bt_homehub6dx_data_received (Data received)",
+      "sensor.bt_homehub6dx_data_sent (Data sent)",
+      "sensor.bt_homehub6dx_download_speed (Download speed)",
+      "sensor.bt_homehub6dx_external_ip (External IP)",
+      "sensor.bt_homehub6dx_packet_download_speed (Packet download speed)",
+      "sensor.bt_homehub6dx_packet_upload_speed (Packet upload speed)",
+      "sensor.bt_homehub6dx_packets_received (Packets received)",
+      "sensor.bt_homehub6dx_packets_sent (Packets sent)",
+      "sensor.bt_homehub6dx_upload_speed (Upload speed)",
+      "sensor.bt_homehub6dx_uptime (Uptime)",
+      "sensor.bt_homehub6dx_wan_status (WAN status)"
+    ]
+  },
+  {
+    "name": "Backup",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "Home Assistant Backup",
+    "integration": "backup",
+    "entities": [
+      "event.backup_automatic_backup (Automatic backup)",
+      "sensor.backup_backup_manager_state (Backup Manager state)",
+      "sensor.backup_last_attempted_automatic_backup (Last attempted automatic backup)",
+      "sensor.backup_last_successful_automatic_backup (Last successful automatic backup)",
+      "sensor.backup_next_scheduled_automatic_backup (Next scheduled automatic backup)"
+    ]
+  },
+  {
+    "name": "Bedroom",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue motion sensor",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.hue_motion_sensor_1_motion (Motion)",
+      "sensor.hue_motion_sensor_1_battery (Battery)",
+      "sensor.hue_motion_sensor_1_illuminance (Illuminance)",
+      "sensor.hue_motion_sensor_1_temperature (Temperature)",
+      "sensor.hue_motion_sensor_1_zigbee_connectivity (Zigbee connectivity)",
+      "switch.hue_motion_sensor_1_light_sensor_enabled (Light sensor enabled)",
+      "switch.hue_motion_sensor_1_motion_sensor_enabled (Motion sensor enabled)"
+    ]
+  },
+  {
+    "name": "Bottom Landing Sensor",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.bottom_landing_sensor_pir_detection (Pir detection)",
+      "binary_sensor.bottom_landing_sensor_presence (Occupancy)",
+      "button.bottom_landing_sensor_identify (Identify)",
+      "button.bottom_landing_sensor_restart_device (Restart device)",
+      "button.bottom_landing_sensor_spatial_learning (Spatial learning)",
+      "button.bottom_landing_sensor_track_target_distance (Track target distance)",
+      "number.bottom_landing_sensor_absence_delay_timer (Absence delay timer)",
+      "number.bottom_landing_sensor_detection_range (Detection range)",
+      "number.bottom_landing_sensor_humidity_reporting_interval (Humidity reporting interval)",
+      "number.bottom_landing_sensor_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.bottom_landing_sensor_light_reporting_interval (Light reporting interval)",
+      "number.bottom_landing_sensor_light_reporting_threshold (Light reporting threshold)",
+      "number.bottom_landing_sensor_light_sampling_period (Light sampling period)",
+      "number.bottom_landing_sensor_pir_detection_interval (Pir detection interval)",
+      "number.bottom_landing_sensor_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.bottom_landing_sensor_temp_reporting_interval (Temp reporting interval)",
+      "number.bottom_landing_sensor_temp_reporting_threshold (Temp reporting threshold)",
+      "select.bottom_landing_sensor_humidity_report_mode (Humidity report mode)",
+      "select.bottom_landing_sensor_light_report_mode (Light report mode)",
+      "select.bottom_landing_sensor_light_sampling (Light sampling)",
+      "select.bottom_landing_sensor_motion_sensitivity (Motion sensitivity)",
+      "select.bottom_landing_sensor_presence_detection_options (Presence detection options)",
+      "select.bottom_landing_sensor_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.bottom_landing_sensor_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef44100152a137_linkquality (Linkquality)",
+      "sensor.0x54ef44100152a137_power_outage_count (Power outage count)",
+      "sensor.bottom_landing_sensor_battery (Battery)",
+      "sensor.bottom_landing_sensor_detection_range_composite (Detection range composite)",
+      "sensor.bottom_landing_sensor_humidity (Humidity)",
+      "sensor.bottom_landing_sensor_illuminance (Illuminance)",
+      "sensor.bottom_landing_sensor_target_distance (Target distance)",
+      "sensor.bottom_landing_sensor_temperature (Temperature)",
+      "sensor.bottom_landing_sensor_voltage (Voltage)",
+      "switch.bottom_landing_sensor_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.bottom_landing_sensor_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.bottom_landing_sensor_led_disabled_night (Led disabled night)",
+      "text.bottom_landing_sensor_schedule_end_time (Schedule end time)",
+      "text.bottom_landing_sensor_schedule_start_time (Schedule start time)",
+      "update.bottom_landing_sensor"
+    ]
+  },
+  {
+    "name": "Digital Plug 2",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_2_identify (Identify)",
+      "number.digital_plug_2_countdown (Countdown)",
+      "select.digital_plug_2_indicator_mode (Indicator mode)",
+      "select.digital_plug_2_power_outage_memory (Power outage memory)",
+      "select.digital_plug_2_switch_type_button (Switch type button)",
+      "sensor.0xa4c1388b730da1c7_linkquality (Linkquality)",
+      "sensor.digital_plug_2_current (Current)",
+      "sensor.digital_plug_2_energy (Energy)",
+      "sensor.digital_plug_2_power (Power)",
+      "sensor.digital_plug_2_voltage (Voltage)",
+      "switch.digital_plug_2",
+      "switch.digital_plug_2_child_lock (Child lock)",
+      "update.digital_plug_2"
+    ]
+  },
+  {
+    "name": "Digital Plug 3",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_3_identify (Identify)",
+      "number.digital_plug_3_countdown (Countdown)",
+      "select.digital_plug_3_indicator_mode (Indicator mode)",
+      "select.digital_plug_3_power_outage_memory (Power outage memory)",
+      "select.digital_plug_3_switch_type_button (Switch type button)",
+      "sensor.0xa4c1384b2e4b2208_linkquality (Linkquality)",
+      "sensor.digital_plug_3_current (Current)",
+      "sensor.digital_plug_3_energy (Energy)",
+      "sensor.digital_plug_3_power (Power)",
+      "sensor.digital_plug_3_voltage (Voltage)",
+      "switch.digital_plug_3",
+      "switch.digital_plug_3_child_lock (Child lock)",
+      "update.digital_plug_3"
+    ]
+  },
+  {
+    "name": "Digital Plug 4",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_4_identify (Identify)",
+      "number.digital_plug_4_countdown (Countdown)",
+      "select.digital_plug_4_indicator_mode (Indicator mode)",
+      "select.digital_plug_4_power_outage_memory (Power outage memory)",
+      "select.digital_plug_4_switch_type_button (Switch type button)",
+      "sensor.0xa4c138168ec6e824_linkquality (Linkquality)",
+      "sensor.digital_plug_4_current (Current)",
+      "sensor.digital_plug_4_energy (Energy)",
+      "sensor.digital_plug_4_power (Power)",
+      "sensor.digital_plug_4_voltage (Voltage)",
+      "switch.digital_plug_4",
+      "switch.digital_plug_4_child_lock (Child lock)",
+      "update.digital_plug_4"
+    ]
+  },
+  {
+    "name": "Digital_Plug_5",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_5_identify (Identify)",
+      "number.digital_plug_5_countdown (Countdown)",
+      "select.digital_plug_5_indicator_mode (Indicator mode)",
+      "select.digital_plug_5_power_outage_memory (Power outage memory)",
+      "select.digital_plug_5_switch_type_button (Switch type button)",
+      "sensor.0xa4c13833a44087cf_linkquality (Linkquality)",
+      "sensor.digital_plug_5_current (Current)",
+      "sensor.digital_plug_5_energy (Energy)",
+      "sensor.digital_plug_5_power (Power)",
+      "sensor.digital_plug_5_voltage (Voltage)",
+      "switch.digital_plug_5",
+      "switch.digital_plug_5_child_lock (Child lock)",
+      "update.digital_plug_5"
+    ]
+  },
+  {
+    "name": "Digital_Plug_6",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_6_identify (Identify)",
+      "number.digital_plug_6_countdown (Countdown)",
+      "select.digital_plug_6_indicator_mode (Indicator mode)",
+      "select.digital_plug_6_power_outage_memory (Power outage memory)",
+      "select.digital_plug_6_switch_type_button (Switch type button)",
+      "sensor.0xa4c1385a0077b284_linkquality (Linkquality)",
+      "sensor.digital_plug_6_current (Current)",
+      "sensor.digital_plug_6_energy (Energy)",
+      "sensor.digital_plug_6_power (Power)",
+      "sensor.digital_plug_6_voltage (Voltage)",
+      "switch.digital_plug_6",
+      "switch.digital_plug_6_child_lock (Child lock)",
+      "update.digital_plug_6"
+    ]
+  },
+  {
+    "name": "Digital_Plug_7",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_7_identify (Identify)",
+      "number.digital_plug_7_countdown (Countdown)",
+      "select.digital_plug_7_indicator_mode (Indicator mode)",
+      "select.digital_plug_7_power_outage_memory (Power outage memory)",
+      "select.digital_plug_7_switch_type_button (Switch type button)",
+      "sensor.digital_plug_7_current (Current)",
+      "sensor.digital_plug_7_energy (Energy)",
+      "sensor.digital_plug_7_linkquality (Linkquality)",
+      "sensor.digital_plug_7_power (Power)",
+      "sensor.digital_plug_7_voltage (Voltage)",
+      "switch.digital_plug_7",
+      "switch.digital_plug_7_child_lock (Child lock)",
+      "update.digital_plug_7"
+    ]
+  },
+  {
+    "name": "Digital_Plug_8",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.digital_plug_8_identify (Identify)",
+      "number.digital_plug_8_countdown (Countdown)",
+      "select.digital_plug_8_indicator_mode (Indicator mode)",
+      "select.digital_plug_8_power_outage_memory (Power outage memory)",
+      "select.digital_plug_8_switch_type_button (Switch type button)",
+      "sensor.0xa4c1382d11ecc159_linkquality (Linkquality)",
+      "sensor.digital_plug_8_current (Current)",
+      "sensor.digital_plug_8_energy (Energy)",
+      "sensor.digital_plug_8_power (Power)",
+      "sensor.digital_plug_8_voltage (Voltage)",
+      "switch.digital_plug_8",
+      "switch.digital_plug_8_child_lock (Child lock)",
+      "update.digital_plug_8"
+    ]
+  },
+  {
+    "name": "Downstairs Cloakroom",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.downstairs_cloakroom_pir_detection (Pir detection)",
+      "binary_sensor.downstairs_cloakroom_presence (Occupancy)",
+      "button.downstairs_cloakroom_identify (Identify)",
+      "button.downstairs_cloakroom_restart_device (Restart device)",
+      "button.downstairs_cloakroom_spatial_learning (Spatial learning)",
+      "button.downstairs_cloakroom_track_target_distance (Track target distance)",
+      "number.downstairs_cloakroom_absence_delay_timer (Absence delay timer)",
+      "number.downstairs_cloakroom_detection_range (Detection range)",
+      "number.downstairs_cloakroom_humidity_reporting_interval (Humidity reporting interval)",
+      "number.downstairs_cloakroom_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.downstairs_cloakroom_light_reporting_interval (Light reporting interval)",
+      "number.downstairs_cloakroom_light_reporting_threshold (Light reporting threshold)",
+      "number.downstairs_cloakroom_light_sampling_period (Light sampling period)",
+      "number.downstairs_cloakroom_pir_detection_interval (Pir detection interval)",
+      "number.downstairs_cloakroom_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.downstairs_cloakroom_temp_reporting_interval (Temp reporting interval)",
+      "number.downstairs_cloakroom_temp_reporting_threshold (Temp reporting threshold)",
+      "select.downstairs_cloakroom_humidity_report_mode (Humidity report mode)",
+      "select.downstairs_cloakroom_light_report_mode (Light report mode)",
+      "select.downstairs_cloakroom_light_sampling (Light sampling)",
+      "select.downstairs_cloakroom_motion_sensitivity (Motion sensitivity)",
+      "select.downstairs_cloakroom_presence_detection_options (Presence detection options)",
+      "select.downstairs_cloakroom_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.downstairs_cloakroom_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef441001529b9f_linkquality (Linkquality)",
+      "sensor.0x54ef441001529b9f_power_outage_count (Power outage count)",
+      "sensor.downstairs_cloakroom_battery (Battery)",
+      "sensor.downstairs_cloakroom_detection_range_composite (Detection range composite)",
+      "sensor.downstairs_cloakroom_humidity (Humidity)",
+      "sensor.downstairs_cloakroom_illuminance (Illuminance)",
+      "sensor.downstairs_cloakroom_target_distance (Target distance)",
+      "sensor.downstairs_cloakroom_temperature (Temperature)",
+      "sensor.downstairs_cloakroom_voltage (Voltage)",
+      "switch.downstairs_cloakroom_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.downstairs_cloakroom_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.downstairs_cloakroom_led_disabled_night (Led disabled night)",
+      "text.downstairs_cloakroom_schedule_end_time (Schedule end time)",
+      "text.downstairs_cloakroom_schedule_start_time (Schedule start time)",
+      "update.downstairs_cloakroom"
+    ]
+  },
+  {
+    "name": "E1",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0606a63f_linkquality (Linkquality)",
+      "sensor.e1_battery (Battery)",
+      "sensor.e1_soil_moisture (Moisture)",
+      "sensor.e1_temperature (Temperature)",
+      "update.e1"
+    ]
+  },
+  {
+    "name": "ESPHome Device Builder",
+    "area": "",
+    "manufacturer": "ESPHome",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.esphome_device_builder_running (Running)",
+      "sensor.esphome_device_builder_cpu_percent (CPU percent)",
+      "sensor.esphome_device_builder_memory_percent (Memory percent)",
+      "sensor.esphome_device_builder_newest_version (Newest version)",
+      "sensor.esphome_device_builder_version (Version)",
+      "switch.esphome_device_builder",
+      "update.esphome_device_builder_update (Update)"
+    ]
+  },
+  {
+    "name": "Fan_Plug",
+    "area": "",
+    "manufacturer": "Nous",
+    "model": "Smart Zigbee Socket",
+    "integration": "mqtt",
+    "entities": [
+      "button.fan_plug_identify (Identify)",
+      "number.fan_plug_countdown (Countdown)",
+      "select.fan_plug_indicator_mode (Indicator mode)",
+      "select.fan_plug_power_outage_memory (Power outage memory)",
+      "select.fan_plug_switch_type_button (Switch type button)",
+      "sensor.0xa4c1385837a64ab9_linkquality (Linkquality)",
+      "sensor.fan_plug_current (Current)",
+      "sensor.fan_plug_energy (Energy)",
+      "sensor.fan_plug_power (Power)",
+      "sensor.fan_plug_voltage (Voltage)",
+      "switch.fan_plug",
+      "switch.fan_plug_child_lock (Child lock)",
+      "update.fan_plug"
+    ]
+  },
+  {
+    "name": "File editor",
+    "area": "",
+    "manufacturer": "Official apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.file_editor_running (Running)",
+      "sensor.file_editor_cpu_percent (CPU percent)",
+      "sensor.file_editor_memory_percent (Memory percent)",
+      "sensor.file_editor_newest_version (Newest version)",
+      "sensor.file_editor_version (Version)",
+      "switch.file_editor",
+      "update.file_editor_update (Update)"
+    ]
+  },
+  {
+    "name": "Flamingo_Plant_sensor",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0606ad71_linkquality (Linkquality)",
+      "sensor.flamingo_plant_sensor_battery (Battery)",
+      "sensor.flamingo_plant_sensor_soil_moisture (Moisture)",
+      "sensor.flamingo_plant_sensor_temperature (Temperature)",
+      "update.flamingo_plant_sensor"
+    ]
+  },
+  {
+    "name": "Forecast",
+    "area": "",
+    "manufacturer": "Met.no",
+    "model": "Forecast",
+    "integration": "met",
+    "entities": [
+      "weather.forecast_home (Home)"
+    ]
+  },
+  {
+    "name": "Garden_Troff_1",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0605ea76_linkquality (Linkquality)",
+      "sensor.garden_troff_1_battery (Battery)",
+      "sensor.garden_troff_1_soil_moisture (Moisture)",
+      "sensor.garden_troff_1_temperature (Temperature)",
+      "update.garden_troff_1"
+    ]
+  },
+  {
+    "name": "Get HACS",
+    "area": "",
+    "manufacturer": "Home Assistant Community Store",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.get_hacs_running (Running)",
+      "sensor.get_hacs_cpu_percent (CPU percent)",
+      "sensor.get_hacs_memory_percent (Memory percent)",
+      "sensor.get_hacs_newest_version (Newest version)",
+      "sensor.get_hacs_version (Version)",
+      "switch.get_hacs",
+      "update.get_hacs_update (Update)"
+    ]
+  },
+  {
+    "name": "Google Translate en com",
+    "area": "",
+    "manufacturer": "Google",
+    "model": "Google Translate TTS",
+    "integration": "google_translate",
+    "entities": [
+      "tts.google_translate_en_com"
+    ]
+  },
+  {
+    "name": "Grafana",
+    "area": "",
+    "manufacturer": "Home Assistant Community Apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.grafana_running (Running)",
+      "sensor.grafana_cpu_percent (CPU percent)",
+      "sensor.grafana_memory_percent (Memory percent)",
+      "sensor.grafana_newest_version (Newest version)",
+      "sensor.grafana_version (Version)",
+      "switch.grafana",
+      "update.grafana_update (Update)"
+    ]
+  },
+  {
+    "name": "Guest Bathroom Sensor",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.guest_bathroom_sensor_pir_detection (Pir detection)",
+      "binary_sensor.guest_bathroom_sensor_presence (Occupancy)",
+      "button.guest_bathroom_sensor_identify (Identify)",
+      "button.guest_bathroom_sensor_restart_device (Restart device)",
+      "button.guest_bathroom_sensor_spatial_learning (Spatial learning)",
+      "button.guest_bathroom_sensor_track_target_distance (Track target distance)",
+      "number.guest_bathroom_sensor_absence_delay_timer (Absence delay timer)",
+      "number.guest_bathroom_sensor_detection_range (Detection range)",
+      "number.guest_bathroom_sensor_humidity_reporting_interval (Humidity reporting interval)",
+      "number.guest_bathroom_sensor_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.guest_bathroom_sensor_light_reporting_interval (Light reporting interval)",
+      "number.guest_bathroom_sensor_light_reporting_threshold (Light reporting threshold)",
+      "number.guest_bathroom_sensor_light_sampling_period (Light sampling period)",
+      "number.guest_bathroom_sensor_pir_detection_interval (Pir detection interval)",
+      "number.guest_bathroom_sensor_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.guest_bathroom_sensor_temp_reporting_interval (Temp reporting interval)",
+      "number.guest_bathroom_sensor_temp_reporting_threshold (Temp reporting threshold)",
+      "select.guest_bathroom_sensor_humidity_report_mode (Humidity report mode)",
+      "select.guest_bathroom_sensor_light_report_mode (Light report mode)",
+      "select.guest_bathroom_sensor_light_sampling (Light sampling)",
+      "select.guest_bathroom_sensor_motion_sensitivity (Motion sensitivity)",
+      "select.guest_bathroom_sensor_presence_detection_options (Presence detection options)",
+      "select.guest_bathroom_sensor_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.guest_bathroom_sensor_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef441001529561_linkquality (Linkquality)",
+      "sensor.0x54ef441001529561_power_outage_count (Power outage count)",
+      "sensor.guest_bathroom_sensor_battery (Battery)",
+      "sensor.guest_bathroom_sensor_detection_range_composite (Detection range composite)",
+      "sensor.guest_bathroom_sensor_humidity (Humidity)",
+      "sensor.guest_bathroom_sensor_illuminance (Illuminance)",
+      "sensor.guest_bathroom_sensor_target_distance (Target distance)",
+      "sensor.guest_bathroom_sensor_temperature (Temperature)",
+      "sensor.guest_bathroom_sensor_voltage (Voltage)",
+      "switch.guest_bathroom_sensor_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.guest_bathroom_sensor_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.guest_bathroom_sensor_led_disabled_night (Led disabled night)",
+      "text.guest_bathroom_sensor_schedule_end_time (Schedule end time)",
+      "text.guest_bathroom_sensor_schedule_start_time (Schedule start time)",
+      "update.guest_bathroom_sensor"
+    ]
+  },
+  {
+    "name": "HACS",
+    "area": "",
+    "manufacturer": "hacs.xyz",
+    "model": "",
+    "integration": "hacs",
+    "entities": [
+      "switch.hacs_pre_release (Pre-release)",
+      "update.hacs_update (Update)"
+    ]
+  },
+  {
+    "name": "HASS Bridge:21064",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "HomeBridge",
+    "integration": "homekit",
+    "entities": []
+  },
+  {
+    "name": "Home Assistant Core",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "Home Assistant Core",
+    "integration": "hassio",
+    "entities": [
+      "sensor.home_assistant_core_cpu_percent (CPU percent)",
+      "sensor.home_assistant_core_memory_percent (Memory percent)",
+      "update.home_assistant_core_update (Update)"
+    ]
+  },
+  {
+    "name": "Home Assistant Host",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "Home Assistant Host",
+    "integration": "hassio",
+    "entities": [
+      "sensor.home_assistant_host_apparmor_version (AppArmor version)",
+      "sensor.home_assistant_host_disk_free (Disk free)",
+      "sensor.home_assistant_host_disk_total (Disk total)",
+      "sensor.home_assistant_host_disk_used (Disk used)",
+      "sensor.home_assistant_host_os_agent_version (OS Agent version)"
+    ]
+  },
+  {
+    "name": "Home Assistant Operating System",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "Home Assistant Operating System",
+    "integration": "hassio",
+    "entities": [
+      "sensor.home_assistant_operating_system_newest_version (Newest version)",
+      "sensor.home_assistant_operating_system_version (Version)",
+      "update.home_assistant_operating_system_update (Update)"
+    ]
+  },
+  {
+    "name": "Home Assistant Supervisor",
+    "area": "",
+    "manufacturer": "Home Assistant",
+    "model": "Home Assistant Supervisor",
+    "integration": "hassio",
+    "entities": [
+      "sensor.home_assistant_supervisor_cpu_percent (CPU percent)",
+      "sensor.home_assistant_supervisor_memory_percent (Memory percent)",
+      "update.home_assistant_supervisor_update (Update)"
+    ]
+  },
+  {
+    "name": "House Daylight Running",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Zone",
+    "integration": "hue",
+    "entities": [
+      "light.house_daylight_running"
+    ]
+  },
+  {
+    "name": "Hue Bridge",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue Bridge",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.music_area (Music area)",
+      "sensor.hue_bridge_zigbee_connectivity (Zigbee connectivity)",
+      "switch.automation_guest_room_switch (Automation: Guest Room switch)",
+      "switch.automation_hue_outdoor_motion_sensor_1 (Automation: Hue outdoor motion sensor 1)",
+      "switch.automation_kitchen_switch (Automation: Kitchen Switch)",
+      "switch.automation_living_room_switch (Automation: Living Room Switch)",
+      "switch.automation_longe_kitchen (Automation: Longe- Kitchen )",
+      "switch.automation_outdoor_sensor (Automation: Outdoor Sensor)",
+      "switch.automation_outside (Automation: Outside )",
+      "switch.automation_sunset_stairs (Automation: Sunset stairs)",
+      "switch.automation_troff (Automation: Troff )"
+    ]
+  },
+  {
+    "name": "Hue ambiance spot 1",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue ambiance spot",
+    "integration": "hue",
+    "entities": [
+      "light.hue_ambiance_spot_1",
+      "sensor.hue_ambiance_spot_1_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue ambiance spot 2",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue ambiance spot",
+    "integration": "hue",
+    "entities": [
+      "light.hue_ambiance_spot_2",
+      "sensor.hue_ambiance_spot_2_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue ambiance spot 3",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue ambiance spot",
+    "integration": "hue",
+    "entities": [
+      "light.hue_ambiance_spot_3",
+      "sensor.hue_ambiance_spot_3_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue ambiance spot 4",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue ambiance spot",
+    "integration": "hue",
+    "entities": [
+      "light.hue_ambiance_spot_4",
+      "sensor.hue_ambiance_spot_4_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue motion sensor 2",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue motion sensor",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.hue_motion_sensor_2_motion (Motion)",
+      "sensor.hue_motion_sensor_2_battery (Battery)",
+      "sensor.hue_motion_sensor_2_illuminance (Illuminance)",
+      "sensor.hue_motion_sensor_2_temperature (Temperature)",
+      "sensor.hue_motion_sensor_2_zigbee_connectivity (Zigbee connectivity)",
+      "switch.hue_motion_sensor_2_light_sensor_enabled (Light sensor enabled)",
+      "switch.hue_motion_sensor_2_motion_sensor_enabled (Motion sensor enabled)"
+    ]
+  },
+  {
+    "name": "ICS Calendar (iCalendar)",
+    "area": "",
+    "manufacturer": "franc6",
+    "model": "integration",
+    "integration": "hacs",
+    "entities": [
+      "switch.ics_calendar_icalendar_pre_release (Pre-release)",
+      "update.ics_calendar_icalendar_update (Update)"
+    ]
+  },
+  {
+    "name": "InfluxDB",
+    "area": "",
+    "manufacturer": "Home Assistant Community Apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.influxdb_running (Running)",
+      "sensor.influxdb_cpu_percent (CPU percent)",
+      "sensor.influxdb_memory_percent (Memory percent)",
+      "sensor.influxdb_newest_version (Newest version)",
+      "sensor.influxdb_version (Version)",
+      "switch.influxdb",
+      "update.influxdb_update (Update)"
+    ]
+  },
+  {
+    "name": "KItchen",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Zone",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_2",
+      "scene.kitchen_concentrate_2 (Concentrate)",
+      "scene.kitchen_energise_2 (Energise)",
+      "scene.kitchen_nightlight (Nightlight)",
+      "scene.kitchen_read (Read)",
+      "scene.kitchen_relax_2 (Relax)"
+    ]
+  },
+  {
+    "name": "Kitchen Aqara PIR Sensor",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.kitchen_aqara_pir_sensor_pir_detection (Pir detection)",
+      "binary_sensor.kitchen_aqara_pir_sensor_presence (Occupancy)",
+      "button.kitchen_aqara_pir_sensor_identify (Identify)",
+      "button.kitchen_aqara_pir_sensor_restart_device (Restart device)",
+      "button.kitchen_aqara_pir_sensor_spatial_learning (Spatial learning)",
+      "button.kitchen_aqara_pir_sensor_track_target_distance (Track target distance)",
+      "number.kitchen_aqara_pir_sensor_absence_delay_timer (Absence delay timer)",
+      "number.kitchen_aqara_pir_sensor_detection_range (Detection range)",
+      "number.kitchen_aqara_pir_sensor_humidity_reporting_interval (Humidity reporting interval)",
+      "number.kitchen_aqara_pir_sensor_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.kitchen_aqara_pir_sensor_light_reporting_interval (Light reporting interval)",
+      "number.kitchen_aqara_pir_sensor_light_reporting_threshold (Light reporting threshold)",
+      "number.kitchen_aqara_pir_sensor_light_sampling_period (Light sampling period)",
+      "number.kitchen_aqara_pir_sensor_pir_detection_interval (Pir detection interval)",
+      "number.kitchen_aqara_pir_sensor_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.kitchen_aqara_pir_sensor_temp_reporting_interval (Temp reporting interval)",
+      "number.kitchen_aqara_pir_sensor_temp_reporting_threshold (Temp reporting threshold)",
+      "select.kitchen_aqara_pir_sensor_humidity_report_mode (Humidity report mode)",
+      "select.kitchen_aqara_pir_sensor_light_report_mode (Light report mode)",
+      "select.kitchen_aqara_pir_sensor_light_sampling (Light sampling)",
+      "select.kitchen_aqara_pir_sensor_motion_sensitivity (Motion sensitivity)",
+      "select.kitchen_aqara_pir_sensor_presence_detection_options (Presence detection options)",
+      "select.kitchen_aqara_pir_sensor_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.kitchen_aqara_pir_sensor_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef4410015292e9_linkquality (Linkquality)",
+      "sensor.0x54ef4410015292e9_power_outage_count (Power outage count)",
+      "sensor.kitchen_aqara_pir_sensor_battery (Battery)",
+      "sensor.kitchen_aqara_pir_sensor_detection_range_composite (Detection range composite)",
+      "sensor.kitchen_aqara_pir_sensor_humidity (Humidity)",
+      "sensor.kitchen_aqara_pir_sensor_illuminance (Illuminance)",
+      "sensor.kitchen_aqara_pir_sensor_target_distance (Target distance)",
+      "sensor.kitchen_aqara_pir_sensor_temperature (Temperature)",
+      "sensor.kitchen_aqara_pir_sensor_voltage (Voltage)",
+      "switch.kitchen_aqara_pir_sensor_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.kitchen_aqara_pir_sensor_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.kitchen_aqara_pir_sensor_led_disabled_night (Led disabled night)",
+      "text.kitchen_aqara_pir_sensor_schedule_end_time (Schedule end time)",
+      "text.kitchen_aqara_pir_sensor_schedule_start_time (Schedule start time)",
+      "update.kitchen_aqara_pir_sensor"
+    ]
+  },
+  {
+    "name": "Kitchen Spots",
+    "area": "",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Zone",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_spots_2",
+      "scene.kitchen_spots_energise (Energise)"
+    ]
+  },
+  {
+    "name": "Landing Sensor Top",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.landing_sensor_top_pir_detection (Pir detection)",
+      "binary_sensor.landing_sensor_top_presence (Occupancy)",
+      "button.landing_sensor_top_identify (Identify)",
+      "button.landing_sensor_top_restart_device (Restart device)",
+      "button.landing_sensor_top_spatial_learning (Spatial learning)",
+      "button.landing_sensor_top_track_target_distance (Track target distance)",
+      "number.landing_sensor_top_absence_delay_timer (Absence delay timer)",
+      "number.landing_sensor_top_detection_range (Detection range)",
+      "number.landing_sensor_top_humidity_reporting_interval (Humidity reporting interval)",
+      "number.landing_sensor_top_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.landing_sensor_top_light_reporting_interval (Light reporting interval)",
+      "number.landing_sensor_top_light_reporting_threshold (Light reporting threshold)",
+      "number.landing_sensor_top_light_sampling_period (Light sampling period)",
+      "number.landing_sensor_top_pir_detection_interval (Pir detection interval)",
+      "number.landing_sensor_top_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.landing_sensor_top_temp_reporting_interval (Temp reporting interval)",
+      "number.landing_sensor_top_temp_reporting_threshold (Temp reporting threshold)",
+      "select.landing_sensor_top_humidity_report_mode (Humidity report mode)",
+      "select.landing_sensor_top_light_report_mode (Light report mode)",
+      "select.landing_sensor_top_light_sampling (Light sampling)",
+      "select.landing_sensor_top_motion_sensitivity (Motion sensitivity)",
+      "select.landing_sensor_top_presence_detection_options (Presence detection options)",
+      "select.landing_sensor_top_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.landing_sensor_top_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef44100152b6f3_linkquality (Linkquality)",
+      "sensor.0x54ef44100152b6f3_power_outage_count (Power outage count)",
+      "sensor.landing_sensor_top_battery (Battery)",
+      "sensor.landing_sensor_top_detection_range_composite (Detection range composite)",
+      "sensor.landing_sensor_top_humidity (Humidity)",
+      "sensor.landing_sensor_top_illuminance (Illuminance)",
+      "sensor.landing_sensor_top_target_distance (Target distance)",
+      "sensor.landing_sensor_top_temperature (Temperature)",
+      "sensor.landing_sensor_top_voltage (Voltage)",
+      "switch.landing_sensor_top_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.landing_sensor_top_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.landing_sensor_top_led_disabled_night (Led disabled night)",
+      "text.landing_sensor_top_schedule_end_time (Schedule end time)",
+      "text.landing_sensor_top_schedule_start_time (Schedule start time)",
+      "update.landing_sensor_top"
+    ]
+  },
+  {
+    "name": "Mac",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "Mac14,14",
+    "integration": "mobile_app",
+    "entities": [
+      "binary_sensor.mac_active (Active)",
+      "binary_sensor.mac_audio_input_in_use (Audio Input In Use)",
+      "binary_sensor.mac_audio_output_in_use (Audio Output In Use)",
+      "binary_sensor.mac_camera_in_use (Camera In Use)",
+      "device_tracker.mac",
+      "notify.mac",
+      "sensor.mac_active_audio_input (Active Audio Input)",
+      "sensor.mac_active_audio_output (Active Audio Output)",
+      "sensor.mac_active_camera (Active Camera)",
+      "sensor.mac_app_version (App Version)",
+      "sensor.mac_audio_output (Audio Output)",
+      "sensor.mac_bssid (BSSID)",
+      "sensor.mac_connection_type (Connection Type)",
+      "sensor.mac_displays (Displays)",
+      "sensor.mac_frontmost_app (Frontmost App)",
+      "sensor.mac_geocoded_location (Geocoded Location)",
+      "sensor.mac_last_update_trigger (Last Update Trigger)",
+      "sensor.mac_location_permission (Location permission)",
+      "sensor.mac_primary_display_id (Primary Display ID)",
+      "sensor.mac_primary_display_name (Primary Display Name)",
+      "sensor.mac_ssid (SSID)",
+      "sensor.mac_storage (Storage)"
+    ]
+  },
+  {
+    "name": "Matter Server",
+    "area": "",
+    "manufacturer": "Official apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.matter_server_running (Running)",
+      "sensor.matter_server_cpu_percent (CPU percent)",
+      "sensor.matter_server_memory_percent (Memory percent)",
+      "sensor.matter_server_newest_version (Newest version)",
+      "sensor.matter_server_version (Version)",
+      "switch.matter_server",
+      "update.matter_server_update (Update)"
+    ]
+  },
+  {
+    "name": "Michael Thomas\u2019s iPhone",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPhone16,1",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.michael_thomass_iphone",
+      "notify.michael_thomass_iphone",
+      "sensor.michael_thomass_iphone_app_version (App Version)",
+      "sensor.michael_thomass_iphone_audio_output (Audio Output)",
+      "sensor.michael_thomass_iphone_battery_level (Battery Level)",
+      "sensor.michael_thomass_iphone_battery_state (Battery State)",
+      "sensor.michael_thomass_iphone_bssid (BSSID)",
+      "sensor.michael_thomass_iphone_connection_type (Connection Type)",
+      "sensor.michael_thomass_iphone_geocoded_location (Geocoded Location)",
+      "sensor.michael_thomass_iphone_last_update_trigger (Last Update Trigger)",
+      "sensor.michael_thomass_iphone_location_permission (Location permission)",
+      "sensor.michael_thomass_iphone_sim_1 (SIM 1)",
+      "sensor.michael_thomass_iphone_sim_2 (SIM 2)",
+      "sensor.michael_thomass_iphone_ssid (SSID)",
+      "sensor.michael_thomass_iphone_storage (Storage)"
+    ]
+  },
+  {
+    "name": "Mosquitto broker",
+    "area": "",
+    "manufacturer": "Official apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.mosquitto_broker_running (Running)",
+      "sensor.mosquitto_broker_cpu_percent (CPU percent)",
+      "sensor.mosquitto_broker_memory_percent (Memory percent)",
+      "sensor.mosquitto_broker_newest_version (Newest version)",
+      "sensor.mosquitto_broker_version (Version)",
+      "switch.mosquitto_broker",
+      "update.mosquitto_broker_update (Update)"
+    ]
+  },
+  {
+    "name": "Node-RED",
+    "area": "",
+    "manufacturer": "Home Assistant Community Apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.node_red_running (Running)",
+      "sensor.node_red_cpu_percent (CPU percent)",
+      "sensor.node_red_memory_percent (Memory percent)",
+      "sensor.node_red_newest_version (Newest version)",
+      "sensor.node_red_version (Version)",
+      "switch.node_red",
+      "update.node_red_update (Update)"
+    ]
+  },
+  {
+    "name": "Onsuite Sensor",
+    "area": "",
+    "manufacturer": "Aqara",
+    "model": "Presence sensor FP300",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.onsuite_sensor_pir_detection (Pir detection)",
+      "binary_sensor.onsuite_sensor_presence (Occupancy)",
+      "button.onsuite_sensor_identify (Identify)",
+      "button.onsuite_sensor_restart_device (Restart device)",
+      "button.onsuite_sensor_spatial_learning (Spatial learning)",
+      "button.onsuite_sensor_track_target_distance (Track target distance)",
+      "number.onsuite_sensor_absence_delay_timer (Absence delay timer)",
+      "number.onsuite_sensor_detection_range (Detection range)",
+      "number.onsuite_sensor_humidity_reporting_interval (Humidity reporting interval)",
+      "number.onsuite_sensor_humidity_reporting_threshold (Humidity reporting threshold)",
+      "number.onsuite_sensor_light_reporting_interval (Light reporting interval)",
+      "number.onsuite_sensor_light_reporting_threshold (Light reporting threshold)",
+      "number.onsuite_sensor_light_sampling_period (Light sampling period)",
+      "number.onsuite_sensor_pir_detection_interval (Pir detection interval)",
+      "number.onsuite_sensor_temp_and_humidity_sampling_period (Temp and humidity sampling period)",
+      "number.onsuite_sensor_temp_reporting_interval (Temp reporting interval)",
+      "number.onsuite_sensor_temp_reporting_threshold (Temp reporting threshold)",
+      "select.onsuite_sensor_humidity_report_mode (Humidity report mode)",
+      "select.onsuite_sensor_light_report_mode (Light report mode)",
+      "select.onsuite_sensor_light_sampling (Light sampling)",
+      "select.onsuite_sensor_motion_sensitivity (Motion sensitivity)",
+      "select.onsuite_sensor_presence_detection_options (Presence detection options)",
+      "select.onsuite_sensor_temp_and_humidity_sampling (Temp and humidity sampling)",
+      "select.onsuite_sensor_temp_reporting_mode (Temp reporting mode)",
+      "sensor.0x54ef44100152a597_linkquality (Linkquality)",
+      "sensor.0x54ef44100152a597_power_outage_count (Power outage count)",
+      "sensor.onsuite_sensor_battery (Battery)",
+      "sensor.onsuite_sensor_detection_range_composite (Detection range composite)",
+      "sensor.onsuite_sensor_humidity (Humidity)",
+      "sensor.onsuite_sensor_illuminance (Illuminance)",
+      "sensor.onsuite_sensor_target_distance (Target distance)",
+      "sensor.onsuite_sensor_temperature (Temperature)",
+      "sensor.onsuite_sensor_voltage (Voltage)",
+      "switch.onsuite_sensor_ai_interference_source_selfidentification (Ai interference source selfidentification)",
+      "switch.onsuite_sensor_ai_sensitivity_adaptive (Ai sensitivity adaptive)",
+      "switch.onsuite_sensor_led_disabled_night (Led disabled night)",
+      "text.onsuite_sensor_schedule_end_time (Schedule end time)",
+      "text.onsuite_sensor_schedule_start_time (Schedule start time)",
+      "update.onsuite_sensor"
+    ]
+  },
+  {
+    "name": "Peace Lilly",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0605eaaf_linkquality (Linkquality)",
+      "sensor.peace_lilly_battery (Battery)",
+      "sensor.peace_lilly_soil_moisture (Moisture)",
+      "sensor.peace_lilly_temperature (Temperature)",
+      "update.peace_lilly"
+    ]
+  },
+  {
+    "name": "Pixel 10 Pro XL",
+    "area": "",
+    "manufacturer": "Google",
+    "model": "Pixel 10 Pro XL",
+    "integration": "mobile_app",
+    "entities": [
+      "binary_sensor.pixel_10_pro_xl_android_auto (Android Auto)",
+      "binary_sensor.pixel_10_pro_xl_app_inactive (App inactive)",
+      "binary_sensor.pixel_10_pro_xl_bluetooth_state (Bluetooth state)",
+      "binary_sensor.pixel_10_pro_xl_device_locked (Device locked)",
+      "binary_sensor.pixel_10_pro_xl_device_secure (Device secure)",
+      "binary_sensor.pixel_10_pro_xl_doze_mode (Doze mode)",
+      "binary_sensor.pixel_10_pro_xl_headphones (Headphones)",
+      "binary_sensor.pixel_10_pro_xl_high_accuracy_mode (High accuracy mode)",
+      "binary_sensor.pixel_10_pro_xl_hotspot_state (Hotspot state)",
+      "binary_sensor.pixel_10_pro_xl_interactive (Interactive)",
+      "binary_sensor.pixel_10_pro_xl_is_charging (Is charging)",
+      "binary_sensor.pixel_10_pro_xl_keyguard_locked (Keyguard locked)",
+      "binary_sensor.pixel_10_pro_xl_keyguard_secure (Keyguard secure)",
+      "binary_sensor.pixel_10_pro_xl_mic_muted (Mic muted)",
+      "binary_sensor.pixel_10_pro_xl_mobile_data (Mobile data)",
+      "binary_sensor.pixel_10_pro_xl_mobile_data_roaming (Mobile data roaming)",
+      "binary_sensor.pixel_10_pro_xl_music_active (Music active)",
+      "binary_sensor.pixel_10_pro_xl_nfc_state (NFC state)",
+      "binary_sensor.pixel_10_pro_xl_power_save (Power save)",
+      "binary_sensor.pixel_10_pro_xl_speakerphone (Speakerphone)",
+      "binary_sensor.pixel_10_pro_xl_wi_fi_state (Wi-Fi state)",
+      "binary_sensor.pixel_10_pro_xl_work_profile (Work profile)",
+      "device_tracker.pixel_10_pro_xl",
+      "notify.pixel_10_pro_xl",
+      "sensor.pixel_10_pro_xl_accent_color (Accent color)",
+      "sensor.pixel_10_pro_xl_active_calories_burned (Active calories burned)",
+      "sensor.pixel_10_pro_xl_active_notification_count (Active notification count)",
+      "sensor.pixel_10_pro_xl_app_importance (App importance)",
+      "sensor.pixel_10_pro_xl_app_memory (App memory)",
+      "sensor.pixel_10_pro_xl_app_rx_gb (App Rx GB)",
+      "sensor.pixel_10_pro_xl_app_standby_bucket (App standby bucket)",
+      "sensor.pixel_10_pro_xl_app_tx_gb (App Tx GB)",
+      "sensor.pixel_10_pro_xl_audio_mode (Audio mode)",
+      "sensor.pixel_10_pro_xl_battery_cycle_count (Battery cycle count)",
+      "sensor.pixel_10_pro_xl_battery_health (Battery health)",
+      "sensor.pixel_10_pro_xl_battery_level (Battery level)",
+      "sensor.pixel_10_pro_xl_battery_power (Battery power)",
+      "sensor.pixel_10_pro_xl_battery_state (Battery state)",
+      "sensor.pixel_10_pro_xl_battery_temperature (Battery temperature)",
+      "sensor.pixel_10_pro_xl_beacon_monitor (Beacon monitor)",
+      "sensor.pixel_10_pro_xl_ble_transmitter (BLE transmitter)",
+      "sensor.pixel_10_pro_xl_blood_glucose (Blood glucose)",
+      "sensor.pixel_10_pro_xl_bluetooth_connection (Bluetooth connection)",
+      "sensor.pixel_10_pro_xl_body_fat (Body fat)",
+      "sensor.pixel_10_pro_xl_car_battery (Car battery)",
+      "sensor.pixel_10_pro_xl_car_charging_status (Car charging status)",
+      "sensor.pixel_10_pro_xl_car_ev_connector_type (Car EV connector type)",
+      "sensor.pixel_10_pro_xl_car_fuel (Car fuel)",
+      "sensor.pixel_10_pro_xl_car_fuel_type (Car fuel type)",
+      "sensor.pixel_10_pro_xl_car_name (Car name)",
+      "sensor.pixel_10_pro_xl_car_odometer (Car odometer)",
+      "sensor.pixel_10_pro_xl_car_range_remaining (Car range remaining)",
+      "sensor.pixel_10_pro_xl_car_speed (Car speed)",
+      "sensor.pixel_10_pro_xl_charger_type (Charger type)",
+      "sensor.pixel_10_pro_xl_current_time_zone (Current time zone)",
+      "sensor.pixel_10_pro_xl_current_version (Current version)",
+      "sensor.pixel_10_pro_xl_daily_distance (Daily distance)",
+      "sensor.pixel_10_pro_xl_daily_elevation_gained (Daily elevation gained)",
+      "sensor.pixel_10_pro_xl_daily_floors (Daily floors)",
+      "sensor.pixel_10_pro_xl_daily_steps (Daily steps)",
+      "sensor.pixel_10_pro_xl_data_network_type_sim_1 (Data network type (SIM 1))",
+      "sensor.pixel_10_pro_xl_data_network_type_sim_2 (Data network type (SIM 2))",
+      "sensor.pixel_10_pro_xl_detected_activity (Detected activity)",
+      "sensor.pixel_10_pro_xl_diastolic_blood_pressure (Diastolic blood pressure)",
+      "sensor.pixel_10_pro_xl_do_not_disturb_sensor (Do Not Disturb sensor)",
+      "sensor.pixel_10_pro_xl_external_storage (External storage)",
+      "sensor.pixel_10_pro_xl_geocoded_location (Geocoded location)",
+      "sensor.pixel_10_pro_xl_heart_rate (Heart rate)",
+      "sensor.pixel_10_pro_xl_heart_rate_variability (Heart rate variability)",
+      "sensor.pixel_10_pro_xl_high_accuracy_update_interval (High accuracy update interval)",
+      "sensor.pixel_10_pro_xl_internal_storage (Internal storage)",
+      "sensor.pixel_10_pro_xl_ipv6_addresses (IPv6 addresses)",
+      "sensor.pixel_10_pro_xl_last_notification (Last notification)",
+      "sensor.pixel_10_pro_xl_last_reboot (Last reboot)",
+      "sensor.pixel_10_pro_xl_last_removed_notification (Last removed notification)",
+      "sensor.pixel_10_pro_xl_last_update_trigger (Last update trigger)",
+      "sensor.pixel_10_pro_xl_last_used_app (Last used app)",
+      "sensor.pixel_10_pro_xl_light_sensor (Light sensor)",
+      "sensor.pixel_10_pro_xl_media_session (Media session)",
+      "sensor.pixel_10_pro_xl_mobile_rx_gb (Mobile Rx GB)",
+      "sensor.pixel_10_pro_xl_mobile_tx_gb (Mobile Tx GB)",
+      "sensor.pixel_10_pro_xl_network_type (Network type)",
+      "sensor.pixel_10_pro_xl_next_alarm (Next alarm)",
+      "sensor.pixel_10_pro_xl_os_version (OS version)",
+      "sensor.pixel_10_pro_xl_oxygen_saturation (Oxygen saturation)",
+      "sensor.pixel_10_pro_xl_phone_state (Phone state)",
+      "sensor.pixel_10_pro_xl_pressure_sensor (Pressure sensor)",
+      "sensor.pixel_10_pro_xl_proximity_sensor (Proximity sensor)",
+      "sensor.pixel_10_pro_xl_public_ip_address (Public IP address)",
+      "sensor.pixel_10_pro_xl_remaining_charge_time (Remaining charge time)",
+      "sensor.pixel_10_pro_xl_respiratory_rate (Respiratory rate)",
+      "sensor.pixel_10_pro_xl_resting_heart_rate (Resting heart rate)",
+      "sensor.pixel_10_pro_xl_ringer_mode (Ringer mode)",
+      "sensor.pixel_10_pro_xl_screen_brightness (Screen brightness)",
+      "sensor.pixel_10_pro_xl_screen_off_timeout (Screen off timeout)",
+      "sensor.pixel_10_pro_xl_screen_orientation (Screen orientation)",
+      "sensor.pixel_10_pro_xl_screen_rotation (Screen rotation)",
+      "sensor.pixel_10_pro_xl_security_patch (Security patch)",
+      "sensor.pixel_10_pro_xl_signal_strength_sim_1 (Signal strength (SIM 1))",
+      "sensor.pixel_10_pro_xl_signal_strength_sim_2 (Signal strength (SIM 2))",
+      "sensor.pixel_10_pro_xl_sim_1 (SIM 1)",
+      "sensor.pixel_10_pro_xl_sim_2 (SIM 2)",
+      "sensor.pixel_10_pro_xl_sleep_confidence (Sleep confidence)",
+      "sensor.pixel_10_pro_xl_sleep_duration (Sleep duration)",
+      "sensor.pixel_10_pro_xl_sleep_segment (Sleep segment)",
+      "sensor.pixel_10_pro_xl_steps_sensor (Steps sensor)",
+      "sensor.pixel_10_pro_xl_systolic_blood_pressure (Systolic blood pressure)",
+      "sensor.pixel_10_pro_xl_total_calories_burned (Total calories burned)",
+      "sensor.pixel_10_pro_xl_total_rx_gb (Total Rx GB)",
+      "sensor.pixel_10_pro_xl_total_tx_gb (Total Tx GB)",
+      "sensor.pixel_10_pro_xl_vo2_max (VO2 max)",
+      "sensor.pixel_10_pro_xl_volume_level_accessibility (Volume level accessibility)",
+      "sensor.pixel_10_pro_xl_volume_level_alarm (Volume level alarm)",
+      "sensor.pixel_10_pro_xl_volume_level_call (Volume level call)",
+      "sensor.pixel_10_pro_xl_volume_level_dtmf (Volume level DTMF)",
+      "sensor.pixel_10_pro_xl_volume_level_music (Volume level music)",
+      "sensor.pixel_10_pro_xl_volume_level_notification (Volume level notification)",
+      "sensor.pixel_10_pro_xl_volume_level_ringer (Volume level ringer)",
+      "sensor.pixel_10_pro_xl_volume_level_system (Volume level system)",
+      "sensor.pixel_10_pro_xl_weight (Weight)",
+      "sensor.pixel_10_pro_xl_wi_fi_bssid (Wi-Fi BSSID)",
+      "sensor.pixel_10_pro_xl_wi_fi_connection (Wi-Fi connection)",
+      "sensor.pixel_10_pro_xl_wi_fi_frequency (Wi-Fi frequency)",
+      "sensor.pixel_10_pro_xl_wi_fi_ip_address (Wi-Fi IP address)",
+      "sensor.pixel_10_pro_xl_wi_fi_link_speed (Wi-Fi link speed)",
+      "sensor.pixel_10_pro_xl_wi_fi_signal_strength (Wi-Fi signal strength)"
+    ]
+  },
+  {
+    "name": "Plex Media Server",
+    "area": "",
+    "manufacturer": "Home Assistant Community Apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.plex_media_server_running (Running)",
+      "sensor.plex_media_server_cpu_percent (CPU percent)",
+      "sensor.plex_media_server_memory_percent (Memory percent)",
+      "sensor.plex_media_server_newest_version (Newest version)",
+      "sensor.plex_media_server_version (Version)",
+      "switch.plex_media_server",
+      "update.plex_media_server_update (Update)"
+    ]
+  },
+  {
+    "name": "Rose_Patch",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0606a65b_linkquality (Linkquality)",
+      "sensor.rose_patch_battery (Battery)",
+      "sensor.rose_patch_soil_moisture (Moisture)",
+      "sensor.rose_patch_temperature (Temperature)",
+      "update.rose_patch"
+    ]
+  },
+  {
+    "name": "Rose_Sensor",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.rose_sensor_battery (Battery)",
+      "sensor.rose_sensor_linkquality (Linkquality)",
+      "sensor.rose_sensor_soil_moisture (Moisture)",
+      "sensor.rose_sensor_temperature (Temperature)",
+      "update.rose_sensor"
+    ]
+  },
+  {
+    "name": "Sun",
+    "area": "",
+    "manufacturer": "",
+    "model": "",
+    "integration": "sun",
+    "entities": [
+      "binary_sensor.sun_solar_rising (Solar rising)",
+      "sensor.sun_next_dawn (Next dawn)",
+      "sensor.sun_next_dusk (Next dusk)",
+      "sensor.sun_next_midnight (Next midnight)",
+      "sensor.sun_next_noon (Next noon)",
+      "sensor.sun_next_rising (Next rising)",
+      "sensor.sun_next_setting (Next setting)",
+      "sensor.sun_solar_azimuth (Solar azimuth)",
+      "sensor.sun_solar_elevation (Solar elevation)",
+      "sensor.sun_solar_rising (Solar rising)"
+    ]
+  },
+  {
+    "name": "Water_Plantet",
+    "area": "",
+    "manufacturer": "Third Reality",
+    "model": "Smart Soil Moisture Sensor",
+    "integration": "mqtt",
+    "entities": [
+      "sensor.0xffffb40e0606b3c0_linkquality (Linkquality)",
+      "sensor.water_plantet_battery (Battery)",
+      "sensor.water_plantet_soil_moisture (Moisture)",
+      "sensor.water_plantet_temperature (Temperature)",
+      "update.water_plantet"
+    ]
+  },
+  {
+    "name": "Z-Wave JS",
+    "area": "",
+    "manufacturer": "Official apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.z_wave_js_running (Running)",
+      "sensor.z_wave_js_cpu_percent (CPU percent)",
+      "sensor.z_wave_js_memory_percent (Memory percent)",
+      "sensor.z_wave_js_newest_version (Newest version)",
+      "sensor.z_wave_js_version (Version)",
+      "switch.z_wave_js",
+      "update.z_wave_js_update (Update)"
+    ]
+  },
+  {
+    "name": "Zigbee2MQTT",
+    "area": "",
+    "manufacturer": "Home Assistant App: Zigbee2MQTT",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.zigbee2mqtt_running (Running)",
+      "sensor.zigbee2mqtt_cpu_percent (CPU percent)",
+      "sensor.zigbee2mqtt_memory_percent (Memory percent)",
+      "sensor.zigbee2mqtt_newest_version (Newest version)",
+      "sensor.zigbee2mqtt_version (Version)",
+      "switch.zigbee2mqtt",
+      "update.zigbee2mqtt_update (Update)"
+    ]
+  },
+  {
+    "name": "Zigbee2MQTT Bridge",
+    "area": "",
+    "manufacturer": "Zigbee2MQTT",
+    "model": "Bridge",
+    "integration": "mqtt",
+    "entities": [
+      "binary_sensor.zigbee2mqtt_bridge_connection_state (Connection state)",
+      "binary_sensor.zigbee2mqtt_bridge_restart_required (Restart required)",
+      "button.zigbee2mqtt_bridge_restart (Restart)",
+      "select.zigbee2mqtt_bridge_log_level (Log level)",
+      "sensor.zigbee2mqtt_bridge_coordinator_version (Coordinator version)",
+      "sensor.zigbee2mqtt_bridge_network_map (Network map)",
+      "sensor.zigbee2mqtt_bridge_version (Version)",
+      "switch.zigbee2mqtt_bridge_permit_join (Permit join)"
+    ]
+  },
+  {
+    "name": "arc",
+    "area": "",
+    "manufacturer": "LEDWORKS",
+    "model": "TWS250STP-B",
+    "integration": "twinkly",
+    "entities": [
+      "light.arc",
+      "select.arc_mode (Mode)"
+    ]
+  },
+  {
+    "name": "iPad",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPad15,7",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.ipad",
+      "notify.ipad",
+      "sensor.ipad_app_version (App Version)",
+      "sensor.ipad_audio_output (Audio Output)",
+      "sensor.ipad_battery_level (Battery Level)",
+      "sensor.ipad_battery_state (Battery State)",
+      "sensor.ipad_bssid (BSSID)",
+      "sensor.ipad_connection_type (Connection Type)",
+      "sensor.ipad_geocoded_location (Geocoded Location)",
+      "sensor.ipad_last_update_trigger (Last Update Trigger)",
+      "sensor.ipad_location_permission (Location permission)",
+      "sensor.ipad_ssid (SSID)",
+      "sensor.ipad_storage (Storage)"
+    ]
+  },
+  {
+    "name": "iPhone",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPhone16,1",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.iphone",
+      "notify.iphone",
+      "sensor.iphone_app_version (App Version)",
+      "sensor.iphone_audio_output (Audio Output)",
+      "sensor.iphone_battery_level (Battery Level)",
+      "sensor.iphone_battery_state (Battery State)",
+      "sensor.iphone_bssid (BSSID)",
+      "sensor.iphone_connection_type (Connection Type)",
+      "sensor.iphone_geocoded_location (Geocoded Location)",
+      "sensor.iphone_last_update_trigger (Last Update Trigger)",
+      "sensor.iphone_location_permission (Location permission)",
+      "sensor.iphone_sim_1 (SIM 1)",
+      "sensor.iphone_sim_2 (SIM 2)",
+      "sensor.iphone_ssid (SSID)",
+      "sensor.iphone_storage (Storage)"
+    ]
+  },
+  {
+    "name": "iphone 16pro",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPhone18,1",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.iphone_16pro",
+      "notify.iphone_16pro",
+      "sensor.iphone_16pro_app_version (App Version)",
+      "sensor.iphone_16pro_audio_output (Audio Output)",
+      "sensor.iphone_16pro_battery_level (Battery Level)",
+      "sensor.iphone_16pro_battery_state (Battery State)",
+      "sensor.iphone_16pro_bssid (BSSID)",
+      "sensor.iphone_16pro_connection_type (Connection Type)",
+      "sensor.iphone_16pro_geocoded_location (Geocoded Location)",
+      "sensor.iphone_16pro_last_update_trigger (Last Update Trigger)",
+      "sensor.iphone_16pro_location_permission (Location permission)",
+      "sensor.iphone_16pro_sim_1 (SIM 1)",
+      "sensor.iphone_16pro_sim_2 (SIM 2)",
+      "sensor.iphone_16pro_ssid (SSID)",
+      "sensor.iphone_16pro_storage (Storage)"
+    ]
+  },
+  {
+    "name": "iphone 17 pro MAX",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPhone18,2",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.iphone_17_pro_max",
+      "notify.iphone_17_pro_max",
+      "sensor.iphone_17_pro_max_app_version (App Version)",
+      "sensor.iphone_17_pro_max_audio_output (Audio Output)",
+      "sensor.iphone_17_pro_max_battery_level (Battery Level)",
+      "sensor.iphone_17_pro_max_battery_state (Battery State)",
+      "sensor.iphone_17_pro_max_bssid (BSSID)",
+      "sensor.iphone_17_pro_max_connection_type (Connection Type)",
+      "sensor.iphone_17_pro_max_geocoded_location (Geocoded Location)",
+      "sensor.iphone_17_pro_max_last_update_trigger (Last Update Trigger)",
+      "sensor.iphone_17_pro_max_location_permission (Location permission)",
+      "sensor.iphone_17_pro_max_sim_1 (SIM 1)",
+      "sensor.iphone_17_pro_max_sim_2 (SIM 2)",
+      "sensor.iphone_17_pro_max_ssid (SSID)",
+      "sensor.iphone_17_pro_max_storage (Storage)",
+      "sensor.iphone_17_pro_max_watch_battery_level (Watch Battery Level)",
+      "sensor.iphone_17_pro_max_watch_battery_state (Watch Battery State)"
+    ]
+  },
+  {
+    "name": "iphone air",
+    "area": "",
+    "manufacturer": "Apple",
+    "model": "iPhone18,4",
+    "integration": "mobile_app",
+    "entities": [
+      "device_tracker.iphone_air",
+      "notify.iphone_air",
+      "sensor.iphone_air_app_version (App Version)",
+      "sensor.iphone_air_audio_output (Audio Output)",
+      "sensor.iphone_air_battery_level (Battery Level)",
+      "sensor.iphone_air_battery_state (Battery State)",
+      "sensor.iphone_air_bssid (BSSID)",
+      "sensor.iphone_air_connection_type (Connection Type)",
+      "sensor.iphone_air_geocoded_location (Geocoded Location)",
+      "sensor.iphone_air_last_update_trigger (Last Update Trigger)",
+      "sensor.iphone_air_location_permission (Location permission)",
+      "sensor.iphone_air_sim_1 (SIM 1)",
+      "sensor.iphone_air_sim_2 (SIM 2)",
+      "sensor.iphone_air_ssid (SSID)",
+      "sensor.iphone_air_storage (Storage)"
+    ]
+  },
+  {
+    "name": "motionEye",
+    "area": "",
+    "manufacturer": "Home Assistant Community Apps",
+    "model": "Home Assistant App",
+    "integration": "hassio",
+    "entities": [
+      "binary_sensor.motioneye_running (Running)",
+      "sensor.motioneye_cpu_percent (CPU percent)",
+      "sensor.motioneye_memory_percent (Memory percent)",
+      "sensor.motioneye_newest_version (Newest version)",
+      "sensor.motioneye_version (Version)",
+      "switch.motioneye",
+      "update.motioneye_update (Update)"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751160",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751160_cloud (Cloud)",
+      "binary_sensor.shellyplus2pm_30c922751160_input_0_input (Input 0)",
+      "binary_sensor.shellyplus2pm_30c922751160_input_1_input (Input 1)",
+      "binary_sensor.shellyplus2pm_30c922751160_restart_required (Restart required)",
+      "button.shellyplus2pm_30c922751160_reboot (Restart)",
+      "sensor.shellyplus2pm_30c922751160_rssi (Signal strength)",
+      "sensor.shellyplus2pm_30c922751160_uptime (Uptime)",
+      "update.shellyplus2pm_30c922751160_beta_firmware (Beta firmware)",
+      "update.shellyplus2pm_30c922751160_firmware (Firmware)"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751160 Output 0",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751160_switch_0_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_0_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_0_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_0_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_current (Current)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_energy (Energy)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_power (Power)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922751160_switch_0_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922751160_switch_0"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751160 Output 1",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751160_switch_1_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_1_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_1_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922751160_switch_1_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_current (Current)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_energy (Energy)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_power (Power)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922751160_switch_1_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922751160_switch_1"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751638",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751638_cloud (Cloud)",
+      "binary_sensor.shellyplus2pm_30c922751638_input_0_input (Input 0)",
+      "binary_sensor.shellyplus2pm_30c922751638_input_1_input (Input 1)",
+      "binary_sensor.shellyplus2pm_30c922751638_restart_required (Restart required)",
+      "button.shellyplus2pm_30c922751638_reboot (Restart)",
+      "sensor.shellyplus2pm_30c922751638_rssi (Signal strength)",
+      "sensor.shellyplus2pm_30c922751638_uptime (Uptime)",
+      "update.shellyplus2pm_30c922751638_beta_firmware (Beta firmware)",
+      "update.shellyplus2pm_30c922751638_firmware (Firmware)"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751638 Output 0",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751638_switch_0_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_0_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_0_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_0_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_current (Current)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_energy (Energy)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_power (Power)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922751638_switch_0_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922751638_switch_0"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922751638 Output 1",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922751638_switch_1_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_1_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_1_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922751638_switch_1_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_current (Current)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_energy (Energy)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_power (Power)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922751638_switch_1_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922751638_switch_1"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922773e00",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922773e00_cloud (Cloud)",
+      "binary_sensor.shellyplus2pm_30c922773e00_input_0_input (Input 0)",
+      "binary_sensor.shellyplus2pm_30c922773e00_input_1_input (Input 1)",
+      "binary_sensor.shellyplus2pm_30c922773e00_restart_required (Restart required)",
+      "button.shellyplus2pm_30c922773e00_reboot (Restart)",
+      "sensor.shellyplus2pm_30c922773e00_rssi (Signal strength)",
+      "sensor.shellyplus2pm_30c922773e00_uptime (Uptime)",
+      "switch.shellyplus2pm_30c922773e00_aioshelly_ble_integration",
+      "update.shellyplus2pm_30c922773e00_beta_firmware (Beta firmware)",
+      "update.shellyplus2pm_30c922773e00_firmware (Firmware)"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922773e00 (30:C9:22:77:3E:02)",
+    "area": "",
+    "manufacturer": "Espressif Inc. (shelly)",
+    "model": "SNSW-102P16EU",
+    "integration": null,
+    "entities": []
+  },
+  {
+    "name": "shellyplus2pm-30c922773e00 Output 0",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_0_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_0_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_0_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_0_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_current (Current)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_energy (Energy)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_power (Power)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922773e00_switch_0_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922773e00_switch_0"
+    ]
+  },
+  {
+    "name": "shellyplus2pm-30c922773e00 Output 1",
+    "area": "",
+    "manufacturer": "Shelly",
+    "model": "Shelly Plus 2PM",
+    "integration": "shelly",
+    "entities": [
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_1_overcurrent (Overcurrent)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_1_overheating (Overheating)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_1_overpowering (Overpowering)",
+      "binary_sensor.shellyplus2pm_30c922773e00_switch_1_overvoltage (Overvoltage)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_current (Current)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_device_temperature (Temperature)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_energy (Energy)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_energy_consumed (Energy consumed)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_frequency (Frequency)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_power (Power)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_returned_energy (Energy returned)",
+      "sensor.shellyplus2pm_30c922773e00_switch_1_voltage (Voltage)",
+      "switch.shellyplus2pm_30c922773e00_switch_1"
+    ]
+  },
+  {
+    "name": "Cloak Room",
+    "area": "Cloak Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.cloak_room",
+      "scene.cloak_room_bright (Bright)",
+      "scene.cloak_room_dimmed (Dimmed)"
+    ]
+  },
+  {
+    "name": "Downstairs WC",
+    "area": "Cloak Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue white lamp",
+    "integration": "hue",
+    "entities": [
+      "light.downstairs_wc",
+      "sensor.downstairs_wc_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Garden",
+    "area": "Garden",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.garden",
+      "scene.garden_alexa_scene (Alexa Scene)",
+      "scene.garden_bright (Bright)",
+      "scene.garden_concentrate (Concentrate)",
+      "scene.garden_dimmed (Dimmed)"
+    ]
+  },
+  {
+    "name": "Outside Light",
+    "area": "Garden",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue outdoor wall",
+    "integration": "hue",
+    "entities": [
+      "light.outside_light",
+      "sensor.outside_light_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Guest Room",
+    "area": "Guest Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.guest_room",
+      "scene.guest_room_concentrate (Concentrate)",
+      "scene.guest_room_energize (Energize)",
+      "scene.guest_room_nightlight (Nightlight)",
+      "scene.guest_room_orange (Orange)",
+      "scene.guest_room_purple (Purple)",
+      "scene.guest_room_read (Read)",
+      "scene.guest_room_red (Red)",
+      "scene.guest_room_relax (Relax)",
+      "scene.guest_room_yellow (Yellow)"
+    ]
+  },
+  {
+    "name": "Guest Room Light",
+    "area": "Guest Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip plus",
+    "integration": "hue",
+    "entities": [
+      "light.guest_room_light",
+      "sensor.guest_room_light_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Guest Room switch",
+    "area": "Guest Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.guest_room_switch_button_1 (Button 1)",
+      "event.guest_room_switch_button_2 (Button 2)",
+      "event.guest_room_switch_button_3 (Button 3)",
+      "event.guest_room_switch_button_4 (Button 4)",
+      "sensor.guest_room_switch_battery (Battery)",
+      "sensor.guest_room_switch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Boiler Cabinet",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue go",
+    "integration": "hue",
+    "entities": [
+      "light.boiler_cabinet",
+      "sensor.boiler_cabinet_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Dining table over light",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color lamp",
+    "integration": "hue",
+    "entities": [
+      "light.dining_table_over_light",
+      "sensor.dining_table_over_light_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen",
+      "scene.kitchen_amber_bloom (Amber bloom)",
+      "scene.kitchen_bright (Bright)",
+      "scene.kitchen_concentrate (Concentrate)",
+      "scene.kitchen_dimmed (Dimmed)",
+      "scene.kitchen_energise (Energise)",
+      "scene.kitchen_honolulu (Honolulu)",
+      "scene.kitchen_new_scene (New scene)",
+      "scene.kitchen_purple",
+      "scene.kitchen_relax (Relax)",
+      "scene.kitchen_smitten (Smitten)",
+      "scene.kitchen_tokyo (Tokyo)",
+      "scene.kitchen_yellow (Yellow)"
+    ]
+  },
+  {
+    "name": "Kitchen Cabinet",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_cabinet",
+      "sensor.kitchen_cabinet_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Hueplay",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_hueplay",
+      "sensor.kitchen_hueplay_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Play 1",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_play_1",
+      "sensor.kitchen_play_1_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Play 2",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_play_2",
+      "sensor.kitchen_play_2_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Strip Controller",
+    "area": "Kitchen",
+    "manufacturer": "WLED",
+    "model": "FOSS",
+    "integration": "wled",
+    "entities": [
+      "button.kitchen_strip_controller_restart (Restart)",
+      "light.kitchen_strip_controller",
+      "number.kitchen_strip_controller_intensity (Intensity)",
+      "number.kitchen_strip_controller_speed (Speed)",
+      "select.kitchen_strip_controller_colour_palette (Colour palette)",
+      "select.kitchen_strip_controller_live_override (Live override)",
+      "select.kitchen_strip_controller_playlist (Playlist)",
+      "select.kitchen_strip_controller_preset (Preset)",
+      "sensor.kitchen_strip_controller_estimated_current (Estimated current)",
+      "sensor.kitchen_strip_controller_ip (IP)",
+      "sensor.kitchen_strip_controller_led_count (LED count)",
+      "sensor.kitchen_strip_controller_max_current (Max current)",
+      "sensor.wled_free_memory (Free memory)",
+      "sensor.wled_uptime (Uptime)",
+      "sensor.wled_wi_fi_bssid (Wi-Fi BSSID)",
+      "sensor.wled_wi_fi_channel (Wi-Fi channel)",
+      "sensor.wled_wi_fi_rssi (Wi-Fi RSSI)",
+      "sensor.wled_wi_fi_signal (Wi-Fi signal)",
+      "switch.kitchen_strip_controller_freeze (Freeze)",
+      "switch.kitchen_strip_controller_nightlight (Nightlight)",
+      "switch.kitchen_strip_controller_reverse (Reverse)",
+      "switch.kitchen_strip_controller_sync_receive (Sync receive)",
+      "switch.kitchen_strip_controller_sync_send (Sync send)",
+      "update.kitchen_strip_controller_firmware (Firmware)"
+    ]
+  },
+  {
+    "name": "Kitchen Switch",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.kitchen_switch_button_1 (Button 1)",
+      "event.kitchen_switch_button_2 (Button 2)",
+      "event.kitchen_switch_button_3 (Button 3)",
+      "event.kitchen_switch_button_4 (Button 4)",
+      "sensor.kitchen_switch_battery (Battery)",
+      "sensor.kitchen_switch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Table Lamp",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color lamp",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_table_lamp",
+      "sensor.kitchen_table_lamp_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Underlights",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip plus",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_underlights",
+      "sensor.kitchen_underlights_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Pantry underlight",
+    "area": "Kitchen",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip plus",
+    "integration": "hue",
+    "entities": [
+      "light.pantry_underlight",
+      "sensor.pantry_underlight_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Kitchen Spots",
+    "area": "Kitchen Spots",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.kitchen_spots",
+      "scene.kitchen_spots_concentrate (Concentrate)"
+    ]
+  },
+  {
+    "name": "Behind Couch",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue Bloom",
+    "integration": "hue",
+    "entities": [
+      "light.behind_couch",
+      "sensor.behind_couch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Cabinet",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue go",
+    "integration": "hue",
+    "entities": [
+      "light.cabinet",
+      "sensor.cabinet_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Cieiling light",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color lamp",
+    "integration": "hue",
+    "entities": [
+      "light.cieiling_light",
+      "sensor.cieiling_light_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Fire",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.fire",
+      "sensor.fire_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue Bloom window",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue Bloom",
+    "integration": "hue",
+    "entities": [
+      "light.hue_bloom_window",
+      "sensor.hue_bloom_window_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Living Room",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.living_room",
+      "scene.living_room_blue (Blue)",
+      "scene.living_room_cody (Cody)",
+      "scene.living_room_cody_two (Cody two)",
+      "scene.living_room_concentrate (Concentrate)",
+      "scene.living_room_dimmed (Dimmed)",
+      "scene.living_room_energize (Energize)",
+      "scene.living_room_evening (Evening)",
+      "scene.living_room_evening_2 (evening 2)",
+      "scene.living_room_evening_3 (Evening)",
+      "scene.living_room_evening_3_2 (evening 3)",
+      "scene.living_room_glitz_and_glam (Glitz and glam)",
+      "scene.living_room_motown (Motown)",
+      "scene.living_room_nightlight (Nightlight)",
+      "scene.living_room_read (Read)",
+      "scene.living_room_relax (Relax)",
+      "scene.living_room_starlight (Starlight)"
+    ]
+  },
+  {
+    "name": "Living Room Switch",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.living_room_switch_button_1 (Button 1)",
+      "event.living_room_switch_button_2 (Button 2)",
+      "event.living_room_switch_button_3 (Button 3)",
+      "event.living_room_switch_button_4 (Button 4)",
+      "sensor.living_room_switch_battery (Battery)",
+      "sensor.living_room_switch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Radiator",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip outdoor",
+    "integration": "hue",
+    "entities": [
+      "light.radiator",
+      "sensor.radiator_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "TV",
+    "area": "Living Room",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip plus",
+    "integration": "hue",
+    "entities": [
+      "light.tv",
+      "sensor.tv_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Bedroom",
+    "area": "Master Bedrrom",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip plus",
+    "integration": "hue",
+    "entities": [
+      "light.bedroom",
+      "sensor.bedroom_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Master Bedrrom",
+    "area": "Master Bedrrom",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.master_bedrrom_motion (Motion)",
+      "light.master_bedrrom",
+      "scene.master_bedrrom_concentrate (Concentrate)",
+      "scene.master_bedrrom_orange (Orange)",
+      "scene.master_bedrrom_purple (Purple)",
+      "scene.master_bedrrom_red (Red)",
+      "scene.master_bedrrom_yellow (Yellow)",
+      "sensor.master_bedrrom_illuminance (Illuminance)"
+    ]
+  },
+  {
+    "name": "Master Bedrrom switch",
+    "area": "Master Bedrrom",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.master_bedrrom_switch_button_1 (Button 1)",
+      "event.master_bedrrom_switch_button_2 (Button 2)",
+      "event.master_bedrrom_switch_button_3 (Button 3)",
+      "event.master_bedrrom_switch_button_4 (Button 4)",
+      "sensor.master_bedrrom_switch_battery (Battery)",
+      "sensor.master_bedrrom_switch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue outdoor motion sensor 1",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue outdoor motion sensor",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.hue_outdoor_motion_sensor_1_motion (Motion)",
+      "sensor.hue_outdoor_motion_sensor_1_battery (Battery)",
+      "sensor.hue_outdoor_motion_sensor_1_illuminance (Illuminance)",
+      "sensor.hue_outdoor_motion_sensor_1_temperature (Temperature)",
+      "sensor.hue_outdoor_motion_sensor_1_zigbee_connectivity (Zigbee connectivity)",
+      "switch.hue_outdoor_motion_sensor_1_light_sensor_enabled (Light sensor enabled)",
+      "switch.hue_outdoor_motion_sensor_1_motion_sensor_enabled (Motion sensor enabled)"
+    ]
+  },
+  {
+    "name": "Outside",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "binary_sensor.outside_motion (Motion)",
+      "light.outside",
+      "scene.outside_alexa_scene (Alexa Scene)",
+      "scene.outside_chinatown (Chinatown)",
+      "scene.outside_energise (Energise)",
+      "scene.outside_fairfax (Fairfax)",
+      "scene.outside_pink (Pink)",
+      "scene.outside_rest (Rest)",
+      "sensor.outside_illuminance (Illuminance)"
+    ]
+  },
+  {
+    "name": "Porch 1",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.porch_1",
+      "sensor.porch_1_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Porch 2",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.porch_2",
+      "sensor.porch_2_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 1",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_1",
+      "sensor.side_1_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 2",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_2",
+      "sensor.side_2_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 3",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_3",
+      "sensor.side_3_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 4",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_4",
+      "sensor.side_4_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 5",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_5",
+      "sensor.side_5_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 6",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_6",
+      "sensor.side_6_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 7",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_7",
+      "sensor.side_7_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Side 8",
+    "area": "Outside",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color spot",
+    "integration": "hue",
+    "entities": [
+      "light.side_8",
+      "sensor.side_8_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Overtable",
+    "area": "Overtable",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": []
+  },
+  {
+    "name": "Meeting",
+    "area": "Stairway",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.meeting_button_1 (Button 1)",
+      "event.meeting_button_2 (Button 2)",
+      "event.meeting_button_3 (Button 3)",
+      "event.meeting_button_4 (Button 4)",
+      "sensor.meeting_battery (Battery)",
+      "sensor.meeting_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Stairway",
+    "area": "Stairway",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip outdoor",
+    "integration": "hue",
+    "entities": [
+      "light.stairway",
+      "sensor.stairway_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Stairway",
+    "area": "Stairway",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.stairway_2",
+      "scene.stairway_concentrate (Concentrate)",
+      "scene.stairway_electric (Electric)",
+      "scene.stairway_energize (Energize)",
+      "scene.stairway_meeting (Meeting)",
+      "scene.stairway_nightlight (Nightlight)",
+      "scene.stairway_read (Read)",
+      "scene.stairway_relax (Relax)",
+      "scene.stairway_ruby_glow (Ruby glow)"
+    ]
+  },
+  {
+    "name": "Stairway Bottom 1",
+    "area": "Stairway",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.stairway_bottom_1_button_1 (Button 1)",
+      "event.stairway_bottom_1_button_2 (Button 2)",
+      "event.stairway_bottom_1_button_3 (Button 3)",
+      "event.stairway_bottom_1_button_4 (Button 4)",
+      "sensor.stairway_bottom_1_battery (Battery)",
+      "sensor.stairway_bottom_1_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Stairway Top",
+    "area": "Stairway",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.stairway_top_button_1 (Button 1)",
+      "event.stairway_top_button_2 (Button 2)",
+      "event.stairway_top_button_3 (Button 3)",
+      "event.stairway_top_button_4 (Button 4)",
+      "sensor.stairway_top_battery (Battery)",
+      "sensor.stairway_top_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Home Assistant Voice 0aadf3",
+    "area": "Study Lamp",
+    "manufacturer": "Nabu Casa",
+    "model": "Home Assistant Voice PE",
+    "integration": null,
+    "entities": [
+      "assist_satellite.home_assistant_voice_0aadf3_assist_satellite (Assist satellite)",
+      "button.home_assistant_voice_0aadf3_restart (Restart)",
+      "event.home_assistant_voice_0aadf3_button_press (Button press)",
+      "light.home_assistant_voice_0aadf3_led_ring (LED Ring)",
+      "media_player.home_assistant_voice_0aadf3_media_player (Media Player)",
+      "select.home_assistant_voice_0aadf3_assistant (Assistant)",
+      "select.home_assistant_voice_0aadf3_assistant_2 (Assistant 2)",
+      "select.home_assistant_voice_0aadf3_finished_speaking_detection (Finished speaking detection)",
+      "select.home_assistant_voice_0aadf3_wake_word (Wake word)",
+      "select.home_assistant_voice_0aadf3_wake_word_2 (Wake word 2)",
+      "select.home_assistant_voice_0aadf3_wake_word_sensitivity (Wake word sensitivity)",
+      "switch.home_assistant_voice_0aadf3_beta_firmware (Beta firmware)",
+      "switch.home_assistant_voice_0aadf3_mute (Mute)",
+      "switch.home_assistant_voice_0aadf3_wake_sound (Wake sound)",
+      "update.home_assistant_voice_0aadf3",
+      "update.home_assistant_voice_0aadf3_firmware (Firmware)"
+    ]
+  },
+  {
+    "name": "Monitor L",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.monitor_l",
+      "sensor.monitor_l_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Monitor R",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.monitor_r",
+      "sensor.monitor_r_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Monitor top",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue play",
+    "integration": "hue",
+    "entities": [
+      "light.monitor_top",
+      "sensor.monitor_top_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Study Lamp",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.study_lamp",
+      "scene.study_lamp_blues",
+      "scene.study_lamp_concentrate (Concentrate)",
+      "scene.study_lamp_energize (Energize)",
+      "scene.study_lamp_read (Read)",
+      "scene.study_lamp_relax (Relax)"
+    ]
+  },
+  {
+    "name": "Study Switch",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue dimmer switch",
+    "integration": "hue",
+    "entities": [
+      "event.study_switch_button_1 (Button 1)",
+      "event.study_switch_button_2 (Button 2)",
+      "event.study_switch_button_3 (Button 3)",
+      "event.study_switch_button_4 (Button 4)",
+      "sensor.study_switch_battery (Battery)",
+      "sensor.study_switch_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "study Ceiling Light",
+    "area": "Study Lamp",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue color lamp",
+    "integration": "hue",
+    "entities": [
+      "light.study_ceiling_light",
+      "sensor.study_ceiling_light_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Hue lightstrip outdoor 2",
+    "area": "Troff",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Hue lightstrip outdoor",
+    "integration": "hue",
+    "entities": [
+      "light.hue_lightstrip_outdoor_2",
+      "sensor.hue_lightstrip_outdoor_2_zigbee_connectivity (Zigbee connectivity)"
+    ]
+  },
+  {
+    "name": "Troff",
+    "area": "Troff",
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "Room",
+    "integration": "hue",
+    "entities": [
+      "light.troff",
+      "scene.troff_blue",
+      "scene.troff_green",
+      "scene.troff_new_scene (New scene)",
+      "scene.troff_orange",
+      "scene.troff_pink",
+      "scene.troff_red",
+      "scene.troff_tq",
+      "scene.troff_yellow"
+    ]
+  }
+]

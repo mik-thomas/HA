@@ -1,45 +1,36 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# per-install barcode assignments (optional: commit to share across deploys)
-/data/device-barcodes.json
-
-# misc
+# OS / Python
 .DS_Store
-*.pem
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
 
-# debug
+# Secrets & local env
+.env
+.env.local
+.env.*.local
+**/ha_token.txt
+/tmp/ha_token.txt
+
+# Next.js app (ha-device-manager)
+ha-device-manager/node_modules/
+ha-device-manager/.next/
+ha-device-manager/out/
+ha-device-manager/data/device-barcodes.json
+ha-device-manager/.vercel/
+ha-device-manager/*.tsbuildinfo
+ha-device-manager/next-env.d.ts
+
+# Node at workspace root (e.g. one-off tooling)
+node_modules/
+
+# CDP / upload scratch scripts from local automation
+.cdp_*
+.cdp_*/
+.upload_*.js
+run_cdp_save_chunks.js
+
+# Logs
+*.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-!.env.example
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

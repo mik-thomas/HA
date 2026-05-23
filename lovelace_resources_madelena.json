@@ -1,0 +1,11 @@
+[
+  {"url": "/hacsfiles/lovelace-mushroom/mushroom.js", "type": "module"},
+  {"url": "/hacsfiles/button-card/button-card.js", "type": "module"},
+  {"url": "/hacsfiles/lovelace-card-mod/card-mod.js", "type": "module"},
+  {"url": "/hacsfiles/lovelace-layout-card/layout-card.js", "type": "module"},
+  {"url": "/hacsfiles/lovelace-auto-entities/auto-entities.js", "type": "module"},
+  {"url": "/hacsfiles/decluttering-card/decluttering-card.js", "type": "module"},
+  {"url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js", "type": "module"},
+  {"url": "/hacsfiles/ha-floorplan/floorplan.js", "type": "module"},
+  {"url": "/local/ha-floorplan.css", "type": "css"}
+]

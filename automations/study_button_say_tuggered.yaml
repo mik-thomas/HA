@@ -1,0 +1,23 @@
+# Deployed to Home Assistant via POST /api/config/automation/config/study_button_say_tuggered
+# Redeploy: python3 deploy_automation.py study_button_say_tuggered
+
+id: study_button_say_tuggered
+alias: Study button says tuggered
+description: Announce tuggered on Home Assistant Voice when Study Hue switch is pressed
+mode: single
+trigger:
+  - trigger: state
+    entity_id:
+      - event.study_switch_button_1
+      - event.study_switch_button_2
+      - event.study_switch_button_3
+      - event.study_switch_button_4
+action:
+  # Direct TTS URL — reliable on Voice PE (same approach as announce_voice.py)
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.home_assistant_voice_0aadf3_media_player
+    data:
+      media_content_id: >-
+        https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=tuggered
+      media_content_type: music
