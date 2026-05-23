@@ -6,8 +6,11 @@
     "dev": "next dev --port 3001",
     "dev:clean": "npm run clean && npm run dev",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -H 0.0.0.0 -p ${PORT:-3001}",
     "serve": "npm run clean && npm run build && npm run start",
+    "ha:token": "node scripts/refresh-ha-token.mjs",
+    "smoke": "node scripts/smoke-test.mjs",
+    "smoke:browser": "npx --yes playwright@1.49.1 install chromium && node scripts/smoke-browser.mjs",
     "lint": "eslint",
     "clean": "rm -rf .next"
   },

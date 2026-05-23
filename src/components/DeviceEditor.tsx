@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useDeviceInventory } from "@/components/DeviceInventoryContext";
 import { IconChevronLeft } from "@/components/icons";
 import { Alert, Toast } from "@/components/ui/Alert";
 import { EntityPowerBadge, PowerBadge } from "@/components/PowerBadge";
@@ -11,46 +12,30 @@ import { Card, CardHeader } from "@/components/ui/Card";
 import { Input, Select } from "@/components/ui/Input";
 import { LoadingPanel } from "@/components/ui/Spinner";
 import { deviceGradient, deviceInitials } from "@/lib/deviceAvatar";
-import type { DeviceWithEntities, HaArea } from "@/lib/ha/types";
-
-interface InventoryResponse {
-  devices: DeviceWithEntities[];
-  areas: HaArea[];
-}
+import type { DeviceWithEntities } from "@/lib/ha/types";
 
 export function DeviceEditor({ deviceId }: { deviceId: string }) {
-  const [row, setRow] = useState<DeviceWithEntities | null>(null);
-  const [areas, setAreas] = useState<HaArea[]>([]);
+  const { getDevice, areas, loading, error: inventoryError, refresh } =
+    useDeviceInventory();
+  const row = getDevice(deviceId);
   const [name, setName] = useState("");
   const [areaId, setAreaId] = useState("");
-  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [toast, setToast] = useState<{ message: string; variant: "success" | "error" } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/devices");
-      const json = (await res.json()) as InventoryResponse & { error?: string };
-      if (!res.ok) throw new Error(json.error ?? res.statusText);
-      const found = json.devices.find((d) => d.device.id === deviceId);
-      if (!found) throw new Error("Device not found");
-      setRow(found);
-      setAreas(Array.isArray(json.areas) ? json.areas : []);
-      setName(found.displayName);
-      setAreaId(found.device.area_id ?? "");
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Failed to load");
-    } finally {
-      setLoading(false);
-    }
-  }, [deviceId]);
-
   useEffect(() => {
-    void load();
-  }, [load]);
+    if (!row) return;
+    setName(row.displayName);
+    setAreaId(row.device.area_id ?? "");
+  }, [row]);
+
+  const loadError = useMemo(() => {
+    if (loading) return null;
+    if (inventoryError) return inventoryError;
+    if (!row) return "Device not found";
+    return null;
+  }, [loading, inventoryError, row]);
 
   useEffect(() => {
     if (!toast) return;
@@ -70,7 +55,7 @@ export function DeviceEditor({ deviceId }: { deviceId: string }) {
       const json = (await res.json()) as { error?: string };
       if (!res.ok) throw new Error(json.error ?? res.statusText);
       setToast({ message: "Device saved successfully", variant: "success" });
-      await load();
+      await refresh(true);
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Save failed";
       setError(msg);
@@ -95,7 +80,7 @@ export function DeviceEditor({ deviceId }: { deviceId: string }) {
       const json = (await res.json()) as { error?: string };
       if (!res.ok) throw new Error(json.error ?? res.statusText);
       setToast({ message: "Entity updated", variant: "success" });
-      await load();
+      await refresh(true);
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Entity update failed";
       setError(msg);
@@ -109,10 +94,10 @@ export function DeviceEditor({ deviceId }: { deviceId: string }) {
     return <LoadingPanel message="Loading device details…" />;
   }
 
-  if (error && !row) {
+  if (loadError && !row) {
     return (
       <Alert variant="error" title="Device unavailable">
-        {error}
+        {loadError}
         <Link href="/" className="mt-4 inline-flex text-sm text-accent hover:underline">
           ← Back to devices
         </Link>
